@@ -1436,5 +1436,43 @@
         "x": 480,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "35e3dff474d9ee48",
+        "type": "mqtt in",
+        "z": "2968a4fcf75e9496",
+        "name": "MQTT Subscriber",
+        "topic": "sensor/cputemp",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "2249e80363cecc42"
+            ]
+        ]
+    },
+    {
+        "id": "2249e80363cecc42",
+        "type": "debug",
+        "z": "2968a4fcf75e9496",
+        "name": "MQTT Message",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 460,
+        "wires": []
     }
 ]
