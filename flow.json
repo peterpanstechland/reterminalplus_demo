@@ -1696,8 +1696,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 640,
-        "y": 80,
+        "x": 800,
+        "y": 100,
         "wires": []
     }
 ]
