@@ -1734,7 +1734,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "fanstat",
+                "p": "topic.fanstat",
                 "pt": "msg",
                 "to": "true",
                 "tot": "bool"
@@ -1745,7 +1745,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
+        "x": 620,
         "y": 420,
         "wires": [
             [
