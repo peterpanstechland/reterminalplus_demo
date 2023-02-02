@@ -1704,17 +1704,21 @@
         "name": "",
         "props": [
             {
-                "p": "fanstat",
-                "v": "false",
-                "vt": "bool"
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
         "crontab": "",
-        "once": false,
+        "once": true,
         "onceDelay": 0.1,
-        "topic": "",
-        "x": 230,
+        "topic": "fanstat",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
         "y": 220,
         "wires": [
             [
