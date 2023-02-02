@@ -1556,7 +1556,9 @@
             [
                 "0d235fa2d8dea565"
             ],
-            []
+            [
+                "a1fa129d5bd93457"
+            ]
         ]
     },
     {
@@ -1689,11 +1691,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "plc/control_fan",
+        "label": "fan on",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 920,
+        "x": 890,
         "y": 420,
         "wires": []
     },
@@ -1815,5 +1817,49 @@
                 "b84742494e290af4"
             ]
         ]
+    },
+    {
+        "id": "a1fa129d5bd93457",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic.fanstat",
+                "pt": "msg",
+                "to": "0",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "3518ae512a871ae6"
+            ]
+        ]
+    },
+    {
+        "id": "3518ae512a871ae6",
+        "type": "ui_text",
+        "z": "57933f921577a835",
+        "group": "1890881e.83819",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "fan off",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 910,
+        "y": 480,
+        "wires": []
     }
 ]
