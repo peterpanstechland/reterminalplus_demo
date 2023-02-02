@@ -1540,7 +1540,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 380,
+        "x": 320,
         "y": 140,
         "wires": [
             []
@@ -1758,7 +1758,7 @@
         "order": 2,
         "width": 0,
         "height": 0,
-        "gtype": "gage",
+        "gtype": "compass",
         "title": "CPU Temperature",
         "label": "C",
         "format": "{{value}}",
@@ -1773,8 +1773,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 570,
-        "y": 240,
+        "x": 590,
+        "y": 260,
         "wires": []
     }
 ]
