@@ -1650,7 +1650,7 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload\nvar str2 = msg.payload\nreturn msg;\n",
+        "func": "var str = msg.payload.fan_stats\nreturn msg",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1738,8 +1738,7 @@
         "y": 380,
         "wires": [
             [
-                "e37cb7c7.144868",
-                "b875b25b0e9372cb"
+                "e37cb7c7.144868"
             ]
         ]
     },
@@ -1756,8 +1755,7 @@
         "y": 180,
         "wires": [
             [
-                "52c5100d2ee5b796",
-                "b875b25b0e9372cb"
+                "52c5100d2ee5b796"
             ]
         ]
     },
@@ -1783,22 +1781,6 @@
         "wires": [
             [
                 "80059560c08bb07f"
-            ]
-        ]
-    },
-    {
-        "id": "b875b25b0e9372cb",
-        "type": "link call",
-        "z": "57933f921577a835",
-        "name": "",
-        "links": [],
-        "linkType": "dynamic",
-        "timeout": "30",
-        "x": 460,
-        "y": 520,
-        "wires": [
-            [
-                "52c5100d2ee5b796"
             ]
         ]
     }
