@@ -1643,7 +1643,8 @@
         "y": 80,
         "wires": [
             [
-                "52c5100d2ee5b796"
+                "52c5100d2ee5b796",
+                "b84742494e290af4"
             ]
         ]
     },
@@ -1682,6 +1683,23 @@
         "className": "",
         "x": 1090,
         "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b84742494e290af4",
+        "type": "ui_text",
+        "z": "57933f921577a835",
+        "group": "1890881e.83819",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 610,
+        "y": 80,
         "wires": []
     }
 ]
