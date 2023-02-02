@@ -1682,6 +1682,9 @@
             {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "1",
@@ -1689,7 +1692,9 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "fanstat",
-        "x": 240,
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 250,
         "y": 220,
         "wires": [
             [
@@ -1707,11 +1712,12 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 660,
-        "y": 300,
+        "y": 260,
         "wires": []
     },
     {
