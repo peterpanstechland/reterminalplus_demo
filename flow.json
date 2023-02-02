@@ -283,6 +283,7 @@
         "append": "",
         "useSpawn": "",
         "timer": "",
+        "winHide": false,
         "name": "RPi Temp.",
         "x": 910,
         "y": 2220,
@@ -322,7 +323,10 @@
         "name": "",
         "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
         "outputs": 1,
-        "noerr": 0,
+        "noerr": 2,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 1090,
         "y": 2220,
         "wires": [
@@ -870,6 +874,8 @@
         ],
         "seg1": "70",
         "seg2": "85",
+        "diff": false,
+        "className": "",
         "x": 760,
         "y": 680,
         "wires": []
@@ -910,7 +916,7 @@
         "id": "ab1a2405.584fd8",
         "type": "exec",
         "z": "9f3346aa.d4fc48",
-        "command": "/opt/vc/bin/vcgencmd measure_temp | egrep -o \"[0-9]+\\.[0-9]+?\"",
+        "command": "vcgencmd measure_temp| egrep -o \"[0-9]+\\.[0-9]+?\"",
         "addpay": false,
         "append": "",
         "useSpawn": "false",
@@ -926,7 +932,9 @@
                 "72d1796e.c403e8",
                 "1c785e0a.f62f52"
             ],
-            [],
+            [
+                "1b181d18705f5369"
+            ],
             []
         ]
     },
@@ -980,6 +988,7 @@
         "removeOlderUnit": "86400",
         "cutout": 0,
         "useOneColor": false,
+        "useUTC": false,
         "colors": [
             "#1f77b4",
             "#aec7e8",
@@ -991,11 +1000,12 @@
             "#9467bd",
             "#c5b0d5"
         ],
-        "outputs": 2,
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
         "x": 800,
         "y": 719,
         "wires": [
-            [],
             []
         ]
     },
@@ -1009,6 +1019,9 @@
         "console": true,
         "tostatus": false,
         "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
         "x": 760,
         "y": 760,
         "wires": []
@@ -1055,6 +1068,7 @@
         "append": "",
         "useSpawn": "false",
         "timer": "",
+        "winHide": false,
         "oldrc": false,
         "name": "cpu_load",
         "x": 420,
@@ -1258,6 +1272,24 @@
         "info": "",
         "x": 720,
         "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1b181d18705f5369",
+        "type": "mqtt out",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "topic": "sensor/cputemp",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 740,
+        "y": 920,
         "wires": []
     },
     {
