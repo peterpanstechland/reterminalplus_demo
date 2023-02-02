@@ -1598,9 +1598,7 @@
         "x": 829.77783203125,
         "y": 308.88885498046875,
         "wires": [
-            [
-                "590532aa.7acabc"
-            ]
+            []
         ]
     },
     {
@@ -1624,43 +1622,8 @@
         "y": 234.888916015625,
         "wires": [
             [
-                "77cd5c72.e9c954",
                 "f1885fc79fae6331"
             ]
-        ]
-    },
-    {
-        "id": "590532aa.7acabc",
-        "type": "pac-write",
-        "z": "57933f921577a835",
-        "device": "2835e976.d07ea6",
-        "dataType": "dig-output",
-        "tagName": "Lamp_output",
-        "tableStartIndex": "",
-        "value": "TRUE",
-        "valueType": "value",
-        "name": "Turn lamp ON",
-        "x": 1021.22216796875,
-        "y": 308.7777099609375,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "77cd5c72.e9c954",
-        "type": "pac-write",
-        "z": "57933f921577a835",
-        "device": "2835e976.d07ea6",
-        "dataType": "dig-output",
-        "tagName": "Lamp_output",
-        "tableStartIndex": "",
-        "value": "FALSE",
-        "valueType": "value",
-        "name": "Turn lamp OFF",
-        "x": 1020.444580078125,
-        "y": 234.77780151367188,
-        "wires": [
-            []
         ]
     },
     {
