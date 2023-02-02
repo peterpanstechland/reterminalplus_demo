@@ -1704,11 +1704,11 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
                 "p": "topic",
                 "vt": "str"
+            },
+            {
+                "p": "payload"
             }
         ],
         "repeat": "",
