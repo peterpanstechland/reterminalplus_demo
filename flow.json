@@ -1736,8 +1736,8 @@
                 "t": "set",
                 "p": "topic.fanstat",
                 "pt": "msg",
-                "to": "1",
-                "tot": "str"
+                "to": "true",
+                "tot": "bool"
             }
         ],
         "action": "",
@@ -1763,8 +1763,8 @@
                 "t": "set",
                 "p": "topic.fanstat",
                 "pt": "msg",
-                "to": "0",
-                "tot": "str"
+                "to": "false",
+                "tot": "bool"
             }
         ],
         "action": "",
