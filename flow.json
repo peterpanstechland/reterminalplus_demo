@@ -1511,7 +1511,7 @@
         "type": "switch",
         "z": "57933f921577a835",
         "name": " > 70 or < 65 ?",
-        "property": "topic",
+        "property": "payload",
         "propertyType": "msg",
         "rules": [
             {
