@@ -264,19 +264,6 @@
         "className": ""
     },
     {
-        "id": "2835e976.d07ea6",
-        "type": "pac-device",
-        "address": "restpac.groov.com",
-        "protocol": "http"
-    },
-    {
-        "id": "7a413f5594b841a3",
-        "type": "pac-device",
-        "address": "",
-        "protocol": "https",
-        "msgQueueFullBehavior": "DROP_OLD"
-    },
-    {
         "id": "2653a0b0.26d638",
         "type": "ui_gauge",
         "z": "511c193196243d63",
