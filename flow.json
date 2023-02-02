@@ -1511,7 +1511,7 @@
         "type": "switch",
         "z": "57933f921577a835",
         "name": " > 70 or < 65 ?",
-        "property": "payload",
+        "property": "topic",
         "propertyType": "msg",
         "rules": [
             {
@@ -1528,8 +1528,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 385.1111145019531,
-        "y": 271.33335876464844,
+        "x": 400,
+        "y": 260,
         "wires": [
             [
                 "52c5100d2ee5b796"
@@ -1618,12 +1618,10 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 380,
-        "y": 200,
+        "x": 220,
+        "y": 140,
         "wires": [
-            [
-                "e37cb7c7.144868"
-            ]
+            []
         ]
     },
     {
@@ -1699,5 +1697,34 @@
         "x": 800,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "018236689cfc098e",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "80",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 320,
+        "wires": [
+            [
+                "e37cb7c7.144868"
+            ]
+        ]
     }
 ]
