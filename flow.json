@@ -220,9 +220,11 @@
     {
         "id": "7036a151865231f3",
         "type": "ui_tab",
-        "name": "Tab 3",
+        "name": "MQTT dashboard",
         "icon": "dashboard",
-        "order": 3
+        "order": 3,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "47a469b15c9c5f27",
@@ -249,6 +251,17 @@
         "willPayload": "",
         "willMsg": {},
         "sessionExpiry": ""
+    },
+    {
+        "id": "315f5223aeb1ca5d",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7036a151865231f3",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "2653a0b0.26d638",
@@ -1454,25 +1467,36 @@
         "y": 460,
         "wires": [
             [
-                "2249e80363cecc42"
+                "8a135ff883995d1d"
             ]
         ]
     },
     {
-        "id": "2249e80363cecc42",
-        "type": "debug",
+        "id": "8a135ff883995d1d",
+        "type": "ui_gauge",
         "z": "2968a4fcf75e9496",
-        "name": "MQTT Message",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 460,
+        "name": "",
+        "group": "315f5223aeb1ca5d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 490,
+        "y": 480,
         "wires": []
     }
 ]
