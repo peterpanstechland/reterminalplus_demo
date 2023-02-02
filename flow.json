@@ -1622,8 +1622,7 @@
         "y": 200,
         "wires": [
             [
-                "e37cb7c7.144868",
-                "b84742494e290af4"
+                "e37cb7c7.144868"
             ]
         ]
     },
@@ -1632,7 +1631,7 @@
         "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "topic": "plc/control_fan",
+        "topic": "plc/fan_stats",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
@@ -1640,7 +1639,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 400,
+        "x": 390,
         "y": 80,
         "wires": [
             [
