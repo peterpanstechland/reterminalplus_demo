@@ -174,7 +174,6 @@
         "wires": [
             [
                 "ab1a2405.584fd8",
-                "f2adaf57.d9a",
                 "57db43b6.37f54c",
                 "e91a3069.06e26"
             ]
@@ -574,6 +573,9 @@
         "console": true,
         "tostatus": true,
         "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
         "x": 300,
         "y": 80,
         "wires": []
