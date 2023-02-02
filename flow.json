@@ -1650,7 +1650,7 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload.fan_stats\nreturn msg",
+        "func": "var str = msg.payload.value\n\nreturn msg",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
