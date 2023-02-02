@@ -1718,5 +1718,22 @@
         "x": 720,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "91315b46c906b388",
+        "type": "function",
+        "z": "57933f921577a835",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 460,
+        "wires": [
+            []
+        ]
     }
 ]
