@@ -264,6 +264,25 @@
         "className": ""
     },
     {
+        "id": "db172adca8234e63",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "19a149e811eb9626",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "19a149e811eb9626",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "2653a0b0.26d638",
         "type": "ui_gauge",
         "z": "511c193196243d63",
@@ -1557,9 +1576,10 @@
             }
         ],
         "checkall": "false",
+        "repair": false,
         "outputs": 1,
-        "x": 829.77783203125,
-        "y": 308.88885498046875,
+        "x": 820,
+        "y": 300,
         "wires": [
             []
         ]
@@ -1650,14 +1670,14 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload.value\n\nreturn msg",
+        "func": "var str = msg.payload\n\nreturn msg",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 440,
+        "y": 240,
         "wires": [
             [
                 "a140480c.114488",
@@ -1781,6 +1801,120 @@
         "wires": [
             [
                 "80059560c08bb07f"
+            ]
+        ]
+    },
+    {
+        "id": "8ccddb9a.a55f38",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "temperature",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "temperature",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 570,
+        "y": 660,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
+            ]
+        ]
+    },
+    {
+        "id": "47b769c5.cb0e28",
+        "type": "join",
+        "z": "57933f921577a835",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "3",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 770,
+        "y": 700,
+        "wires": [
+            [
+                "f9afb265.b11b7"
+            ]
+        ]
+    },
+    {
+        "id": "f9afb265.b11b7",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "2d269127.4f04ce",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "humidity",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "humidity",
+        "payload": "",
+        "payloadType": "num",
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
+            ]
+        ]
+    },
+    {
+        "id": "d6fbe805.0e4628",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "pressure",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "pressure",
+        "payload": "999",
+        "payloadType": "num",
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "47b769c5.cb0e28"
             ]
         ]
     }
