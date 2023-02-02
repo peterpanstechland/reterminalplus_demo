@@ -1,1 +1,795 @@
-[]
+[
+    {
+        "id": "511c193196243d63",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9f3346aa.d4fc48",
+        "type": "tab",
+        "label": "System",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2631142d.86f8fc",
+        "type": "ui_group",
+        "name": "CPU",
+        "tab": "2248aa46.11d1c6",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "4a3f1d17.42abc4",
+        "type": "ui_group",
+        "name": "SD card",
+        "tab": "2248aa46.11d1c6",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "8e72d94d.e2b8c8",
+        "type": "ui_group",
+        "name": "Memory",
+        "tab": "2248aa46.11d1c6",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": true
+    },
+    {
+        "id": "c552b4f6.efaca8",
+        "type": "ui_group",
+        "name": "Buttons",
+        "tab": "2248aa46.11d1c6",
+        "order": 1,
+        "disp": false,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "2248aa46.11d1c6",
+        "type": "ui_tab",
+        "name": "System",
+        "icon": "settings",
+        "order": 2
+    },
+    {
+        "id": "0949775e186a9189",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "6129eac0.5bdec4",
+        "type": "inject",
+        "z": "9f3346aa.d4fc48",
+        "name": "5 min tick",
+        "repeat": "300",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 460,
+        "wires": [
+            [
+                "ab1a2405.584fd8",
+                "f2adaf57.d9a",
+                "57db43b6.37f54c",
+                "e91a3069.06e26"
+            ]
+        ]
+    },
+    {
+        "id": "f4fc2799.51b558",
+        "type": "ui_gauge",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "2631142d.86f8fc",
+        "order": 1,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "CPU load",
+        "label": "%",
+        "format": "{{ msg.payload }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 760,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "23830467.dd874c",
+        "type": "ui_gauge",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "4a3f1d17.42abc4",
+        "order": 2,
+        "width": "6",
+        "height": "4",
+        "gtype": "wave",
+        "title": "Used",
+        "label": "%",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 750,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "10934589.87f3ca",
+        "type": "ui_chart",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "2631142d.86f8fc",
+        "order": 3,
+        "width": "6",
+        "height": "4",
+        "label": "Load, %",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#ff8000",
+            "#aec7e8",
+            "#0080ff",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 780,
+        "y": 640,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "95df7e14.b6609",
+        "type": "ui_chart",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "4a3f1d17.42abc4",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "label": "Storage",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e2fad608.df29c8",
+        "type": "ui_gauge",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "8e72d94d.e2b8c8",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "gtype": "donut",
+        "title": "RAM usage",
+        "label": "%",
+        "format": "{{msg.payload.memusage}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "60",
+        "seg2": "80",
+        "x": 750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "542d167b.24a938",
+        "type": "ui_chart",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "8e72d94d.e2b8c8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "48b90ddd.e18714",
+        "type": "ui_gauge",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "2631142d.86f8fc",
+        "order": 2,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "CPU Temp",
+        "label": "°C",
+        "format": "{{ msg.payload }}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#0080ff",
+            "#ffffff",
+            "#ca3838"
+        ],
+        "seg1": "70",
+        "seg2": "85",
+        "x": 760,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "597cae13.db6de",
+        "type": "function",
+        "z": "9f3346aa.d4fc48",
+        "name": "extract",
+        "func": "msg.payload = msg.payload.memusage;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "542d167b.24a938"
+            ]
+        ]
+    },
+    {
+        "id": "ba1907da.0fcf28",
+        "type": "function",
+        "z": "9f3346aa.d4fc48",
+        "name": "convert_uptime",
+        "func": "var d = Math.floor(msg.payload.uptime / 86400);\nvar h = Math.floor((msg.payload.uptime % 86400) / 3600);\nvar m = Math.floor(((msg.payload.uptime % 86400) % 3600) / 60);\nvar s = ((msg.payload.uptime % 86400) % 3600) % 60;\nmsg.payload = d + ':' + h + ':' + m + ':' + s;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 400,
+        "wires": [
+            [
+                "fb58a432.8d29b8"
+            ]
+        ]
+    },
+    {
+        "id": "ab1a2405.584fd8",
+        "type": "exec",
+        "z": "9f3346aa.d4fc48",
+        "command": "/opt/vc/bin/vcgencmd measure_temp | egrep -o \"[0-9]+\\.[0-9]+?\"",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "read_T",
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "48b90ddd.e18714",
+                "72d1796e.c403e8",
+                "1c785e0a.f62f52"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7805af15.1b74f",
+        "type": "Memory",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "x": 340,
+        "y": 480,
+        "wires": [
+            [
+                "e2fad608.df29c8",
+                "597cae13.db6de"
+            ]
+        ]
+    },
+    {
+        "id": "f2adaf57.d9a",
+        "type": "Uptime",
+        "z": "9f3346aa.d4fc48",
+        "name": "Uptime",
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "ba1907da.0fcf28"
+            ]
+        ]
+    },
+    {
+        "id": "72d1796e.c403e8",
+        "type": "ui_chart",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "group": "2631142d.86f8fc",
+        "order": 4,
+        "width": "6",
+        "height": "3",
+        "label": "Temperature, °C",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "bezier",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "86400",
+        "cutout": 0,
+        "useOneColor": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 2,
+        "x": 800,
+        "y": 719,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "1c785e0a.f62f52",
+        "type": "debug",
+        "z": "9f3346aa.d4fc48",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": true,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 760,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "fb58a432.8d29b8",
+        "type": "ui_text",
+        "z": "9f3346aa.d4fc48",
+        "group": "8e72d94d.e2b8c8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Uptime, d:h:m:s",
+        "format": "{{ msg.payload }}",
+        "layout": "row-spread",
+        "x": 760,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "2f0ed260.6ef01e",
+        "type": "debug",
+        "z": "9f3346aa.d4fc48",
+        "name": "Voyer",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "true",
+        "x": 300,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "57db43b6.37f54c",
+        "type": "exec",
+        "z": "9f3346aa.d4fc48",
+        "command": "top -d 0.5 -b -n2 | grep Cpu | tail -1 | awk '{print 100-$8}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "cpu_load",
+        "x": 420,
+        "y": 600,
+        "wires": [
+            [
+                "f4fc2799.51b558",
+                "10934589.87f3ca"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "e91a3069.06e26",
+        "type": "exec",
+        "z": "9f3346aa.d4fc48",
+        "command": "df -m | grep root",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "read_sd_usage",
+        "x": 320,
+        "y": 300,
+        "wires": [
+            [
+                "527cb653.bbcfe8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "527cb653.bbcfe8",
+        "type": "function",
+        "z": "9f3346aa.d4fc48",
+        "name": "convert",
+        "func": "var msg1,msg2,msg3;\n\nl = msg.payload.split(/(\\s+)/).filter( function(e) { return e.trim().length > 0; } );\nmsg1 = {topic: 'Total', payload: Math.round(l[1] / 1000)};\nmsg2 = {topic: 'Free', payload: Math.round(l[3] / 1000)};\nmsg3 = {topic: 'Used%', payload: l[4].slice(0, -1)};\n\nreturn [msg1, msg2, msg3];",
+        "outputs": 3,
+        "noerr": 0,
+        "x": 540,
+        "y": 280,
+        "wires": [
+            [
+                "95df7e14.b6609"
+            ],
+            [
+                "95df7e14.b6609"
+            ],
+            [
+                "95df7e14.b6609",
+                "23830467.dd874c"
+            ]
+        ]
+    },
+    {
+        "id": "b8be909f.8f951",
+        "type": "ui_button",
+        "z": "9f3346aa.d4fc48",
+        "name": "Next",
+        "group": "c552b4f6.efaca8",
+        "order": 3,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "arrow_forward",
+        "payload": "+1",
+        "payloadType": "str",
+        "topic": "",
+        "x": 530,
+        "y": 60,
+        "wires": [
+            [
+                "386574b8.d2a82c"
+            ]
+        ]
+    },
+    {
+        "id": "386574b8.d2a82c",
+        "type": "ui_ui_control",
+        "z": "9f3346aa.d4fc48",
+        "name": "Control tabs",
+        "x": 730,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0fec75d.6684b8",
+        "type": "ui_button",
+        "z": "9f3346aa.d4fc48",
+        "name": "Prev",
+        "group": "c552b4f6.efaca8",
+        "order": 1,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "arrow_back",
+        "payload": "-1",
+        "payloadType": "str",
+        "topic": "",
+        "x": 530,
+        "y": 100,
+        "wires": [
+            [
+                "386574b8.d2a82c"
+            ]
+        ]
+    },
+    {
+        "id": "433c8c9d.526bc4",
+        "type": "ui_button",
+        "z": "9f3346aa.d4fc48",
+        "name": "Refresh",
+        "group": "c552b4f6.efaca8",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "passthru": false,
+        "label": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "replay",
+        "payload": "{tab:\"\"}",
+        "payloadType": "str",
+        "topic": "",
+        "x": 520,
+        "y": 20,
+        "wires": [
+            [
+                "386574b8.d2a82c"
+            ]
+        ]
+    },
+    {
+        "id": "d9e2f2b.e50341",
+        "type": "inject",
+        "z": "9f3346aa.d4fc48",
+        "name": "1 min tick",
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 490,
+        "y": 140,
+        "wires": [
+            [
+                "78da90fa.fd1c4"
+            ]
+        ]
+    },
+    {
+        "id": "78da90fa.fd1c4",
+        "type": "function",
+        "z": "9f3346aa.d4fc48",
+        "name": "date_time",
+        "func": "var d_obj = new Date().toString().slice(0, -18); \nmsg.payload = d_obj.slice(0, -6) + '<br>' + d_obj.slice(-5); \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 140,
+        "wires": [
+            [
+                "ca66052d.983ce8"
+            ]
+        ]
+    },
+    {
+        "id": "ca66052d.983ce8",
+        "type": "ui_text",
+        "z": "9f3346aa.d4fc48",
+        "group": "c552b4f6.efaca8",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "Date time",
+        "label": "",
+        "format": "{{ msg.payload }}",
+        "layout": "col-center",
+        "x": 780,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "c7e500f1.0b382",
+        "type": "comment",
+        "z": "9f3346aa.d4fc48",
+        "name": "UI controls",
+        "info": "",
+        "x": 720,
+        "y": 20,
+        "wires": []
+    }
+]
