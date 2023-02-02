@@ -1651,7 +1651,7 @@
         "z": "57933f921577a835",
         "name": "function 1",
         "func": "var str = msg.payload\nvar str2 = msg.payload\nreturn msg;\n",
-        "outputs": 1,
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1662,7 +1662,8 @@
             [
                 "a140480c.114488",
                 "b84742494e290af4"
-            ]
+            ],
+            []
         ]
     },
     {
