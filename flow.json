@@ -1705,7 +1705,7 @@
         "props": [
             {
                 "p": "fanstat",
-                "v": "true",
+                "v": "false",
                 "vt": "bool"
             }
         ],
