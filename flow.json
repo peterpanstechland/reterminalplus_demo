@@ -1647,7 +1647,7 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload\nreturn msg;\n",
+        "func": "var str = msg.payload\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1735,6 +1735,48 @@
         "wires": [
             [
                 "e37cb7c7.144868"
+            ]
+        ]
+    },
+    {
+        "id": "80059560c08bb07f",
+        "type": "random",
+        "z": "57933f921577a835",
+        "name": "",
+        "low": "1",
+        "high": "0",
+        "inte": "true",
+        "property": "payload",
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "52c5100d2ee5b796"
+            ]
+        ]
+    },
+    {
+        "id": "035e28ee2ba1c864",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 220,
+        "wires": [
+            [
+                "80059560c08bb07f"
             ]
         ]
     }
