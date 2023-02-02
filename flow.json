@@ -283,6 +283,17 @@
         "hidden": false
     },
     {
+        "id": "2c3f285.7dce7d8",
+        "type": "server",
+        "name": "Home-Assistant",
+        "legacy": false,
+        "addon": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true,
+        "cacheJson": true
+    },
+    {
         "id": "2653a0b0.26d638",
         "type": "ui_gauge",
         "z": "511c193196243d63",
@@ -1641,9 +1652,6 @@
         "name": "",
         "props": [
             {
-                "p": "payload"
-            },
-            {
                 "p": "topic",
                 "vt": "str"
             }
@@ -1653,9 +1661,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "temp",
-        "payload": "",
-        "payloadType": "date",
-        "x": 220,
+        "x": 190,
         "y": 320,
         "wires": [
             [
@@ -1689,9 +1695,6 @@
             {
                 "p": "topic",
                 "vt": "str"
-            },
-            {
-                "p": "payload"
             }
         ],
         "repeat": "1",
@@ -1699,9 +1702,7 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "fanstat",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 250,
+        "x": 240,
         "y": 220,
         "wires": [
             [
@@ -1748,13 +1749,6 @@
                 "pt": "msg",
                 "to": "false",
                 "tot": "bool"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "",
-                "tot": "str"
             }
         ],
         "action": "",
@@ -1762,7 +1756,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 600,
+        "x": 620,
         "y": 480,
         "wires": [
             [
