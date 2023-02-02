@@ -1532,10 +1532,11 @@
         "y": 271.33335876464844,
         "wires": [
             [
-                "68aebe082b087792"
+                "52c5100d2ee5b796"
             ],
             [
-                "fd49162918b096f6"
+                "fd49162918b096f6",
+                "52c5100d2ee5b796"
             ]
         ]
     },
@@ -1638,10 +1639,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 580,
-        "y": 120,
+        "x": 400,
+        "y": 80,
         "wires": [
-            []
+            [
+                "52c5100d2ee5b796"
+            ]
         ]
     },
     {
@@ -1673,31 +1676,23 @@
         "wires": []
     },
     {
-        "id": "68aebe082b087792",
-        "type": "ui_gauge",
+        "id": "52c5100d2ee5b796",
+        "type": "function",
         "z": "57933f921577a835",
-        "name": "",
-        "group": "315f5223aeb1ca5d",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "gtype": "compass",
-        "title": "CPU ",
-        "label": "C",
-        "format": "{{value}}",
-        "min": 0,
-        "max": "100",
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "",
-        "seg2": "",
-        "diff": false,
-        "className": "",
-        "x": 550,
-        "y": 260,
-        "wires": []
+        "name": "function 1",
+        "func": "var str = msg.payload\nmsg.payload = str.substring(5, 9);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 160,
+        "wires": [
+            [
+                "a140480c.114488",
+                "6f4799f.995e768"
+            ]
+        ]
     }
 ]
