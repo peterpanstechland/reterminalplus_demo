@@ -2,7 +2,7 @@
     {
         "id": "511c193196243d63",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "RPi Control",
         "disabled": false,
         "info": "",
         "env": []
@@ -856,6 +856,7 @@
         "append": "",
         "useSpawn": "false",
         "timer": "",
+        "winHide": false,
         "oldrc": false,
         "name": "read_T",
         "x": 420,
@@ -982,8 +983,8 @@
         "targetType": "full",
         "statusVal": "payload",
         "statusType": "auto",
-        "x": 300,
-        "y": 80,
+        "x": 240,
+        "y": 100,
         "wires": []
     },
     {
