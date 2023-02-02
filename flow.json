@@ -1730,16 +1730,20 @@
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "temp",
         "payload": "",
         "payloadType": "date",
-        "x": 200,
+        "x": 220,
         "y": 320,
         "wires": [
             [
@@ -1790,16 +1794,20 @@
         "props": [
             {
                 "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "",
+        "topic": "fanstat",
         "payload": "",
         "payloadType": "date",
-        "x": 240,
+        "x": 260,
         "y": 220,
         "wires": [
             [
