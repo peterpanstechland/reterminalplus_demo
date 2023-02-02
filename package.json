@@ -3,7 +3,8 @@
     "description": "A Node-RED Project",
     "version": "0.0.1",
     "dependencies": {
-        "node-red-dashboard": "3.3.1"
+        "node-red-dashboard": "3.3.1",
+        "node-red-contrib-aedes": "0.6.0"
     },
     "node-red": {
         "settings": {
