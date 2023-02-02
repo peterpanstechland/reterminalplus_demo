@@ -70,7 +70,8 @@
                 "default": "#0094CE",
                 "baseColor": "#0094CE",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
-                "edited": false
+                "edited": true,
+                "reset": false
             },
             "darkTheme": {
                 "default": "#097479",
@@ -158,6 +159,411 @@
         }
     },
     {
+        "id": "1890881e.83819",
+        "type": "ui_group",
+        "name": "Col1",
+        "tab": "c3173234.2636e",
+        "order": 1,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "c5f1b8aa.45bc08",
+        "type": "ui_group",
+        "name": "Actions",
+        "tab": "c3173234.2636e",
+        "order": 4,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "9a96a8b1.92db78",
+        "type": "ui_group",
+        "name": "Col2",
+        "tab": "c3173234.2636e",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "72fc319.cc425d",
+        "type": "ui_group",
+        "name": "Col3",
+        "tab": "c3173234.2636e",
+        "order": 3,
+        "disp": false,
+        "width": "6"
+    },
+    {
+        "id": "c3173234.2636e",
+        "type": "ui_tab",
+        "name": "RPi Control",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "2653a0b0.26d638",
+        "type": "ui_gauge",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "1890881e.83819",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1270,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "fba68adf.14e13",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "vcgencmd measure_temp",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "RPi Temp.",
+        "x": 910,
+        "y": 2220,
+        "wires": [
+            [
+                "fa5b499.e176cb8"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7c8379de.068868",
+        "type": "inject",
+        "z": "511c193196243d63",
+        "name": "",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 704.5,
+        "y": 2228.25,
+        "wires": [
+            [
+                "fba68adf.14e13",
+                "972ece2a.3dbe8",
+                "6242be99.26ac88"
+            ]
+        ]
+    },
+    {
+        "id": "fa5b499.e176cb8",
+        "type": "function",
+        "z": "511c193196243d63",
+        "name": "",
+        "func": "str = msg.payload\nmsg.payload = str.substring(5,9);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1090,
+        "y": 2220,
+        "wires": [
+            [
+                "2653a0b0.26d638",
+                "28b64a2c.b32116"
+            ]
+        ]
+    },
+    {
+        "id": "683a2b05.736204",
+        "type": "ui_button",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "c5f1b8aa.45bc08",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Reboot",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 680,
+        "y": 2600,
+        "wires": [
+            [
+                "1cf31554.2aaa63"
+            ]
+        ]
+    },
+    {
+        "id": "1cf31554.2aaa63",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "sudo reboot",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Reboot",
+        "x": 898,
+        "y": 2600,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "38e53dbf.ca594a",
+        "type": "ui_button",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "c5f1b8aa.45bc08",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Shutdown",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 688.5,
+        "y": 2644.25,
+        "wires": [
+            [
+                "c409cae5.8e4128"
+            ]
+        ]
+    },
+    {
+        "id": "c409cae5.8e4128",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "sudo shutdown -h now",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Shutdown",
+        "x": 909.5,
+        "y": 2662.25,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "28b64a2c.b32116",
+        "type": "ui_chart",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "1890881e.83819",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "outputs": 2,
+        "x": 1270,
+        "y": 2260,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "972ece2a.3dbe8",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "top -d 0.5 -b -n2 | grep \"Cpu(s)\"|tail -n 1 | awk '{print $2 + $4}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "CPU Load",
+        "x": 910,
+        "y": 2300,
+        "wires": [
+            [
+                "b9372186.ed1a5"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "6242be99.26ac88",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "free | grep Mem | awk '{print 100*($4+$6+$7)/$2}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Free Memory",
+        "x": 910,
+        "y": 2380,
+        "wires": [
+            [
+                "9b301b09.8c0468"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b9372186.ed1a5",
+        "type": "ui_gauge",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "1890881e.83819",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Processor",
+        "label": "CPU",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1270,
+        "y": 2300,
+        "wires": []
+    },
+    {
+        "id": "9b301b09.8c0468",
+        "type": "ui_gauge",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "9a96a8b1.92db78",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Memory",
+        "label": "RAM",
+        "format": "{{value.toFixed(1)}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1270,
+        "y": 2380,
+        "wires": []
+    },
+    {
+        "id": "270f61f0.9af05e",
+        "type": "exec",
+        "z": "511c193196243d63",
+        "command": "df -h",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "",
+        "timer": "",
+        "name": "Disk Usage",
+        "x": 910,
+        "y": 2460,
+        "wires": [
+            [
+                "d70b7556.a0a9e"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7ca6ecb.7512014",
+        "type": "ui_gauge",
+        "z": "511c193196243d63",
+        "name": "",
+        "group": "72fc319.cc425d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Disk",
+        "label": "Usage",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "x": 1270,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "d70b7556.a0a9e",
+        "type": "function",
+        "z": "511c193196243d63",
+        "name": "",
+        "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1090,
+        "y": 2460,
+        "wires": [
+            [
+                "7ca6ecb.7512014"
+            ]
+        ]
+    },
+    {
+        "id": "59103f97.07fed",
+        "type": "inject",
+        "z": "511c193196243d63",
+        "name": "",
+        "repeat": "60",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 2460,
+        "wires": [
+            [
+                "270f61f0.9af05e"
+            ]
+        ]
+    },
+    {
         "id": "6129eac0.5bdec4",
         "type": "inject",
         "z": "9f3346aa.d4fc48",
@@ -186,8 +592,8 @@
         "name": "",
         "group": "2631142d.86f8fc",
         "order": 1,
-        "width": "3",
-        "height": "3",
+        "width": 3,
+        "height": 3,
         "gtype": "gage",
         "title": "CPU load",
         "label": "%",
@@ -212,8 +618,8 @@
         "name": "",
         "group": "4a3f1d17.42abc4",
         "order": 2,
-        "width": "6",
-        "height": "4",
+        "width": 6,
+        "height": 4,
         "gtype": "wave",
         "title": "Used",
         "label": "%",
@@ -238,8 +644,8 @@
         "name": "",
         "group": "2631142d.86f8fc",
         "order": 3,
-        "width": "6",
-        "height": "4",
+        "width": 6,
+        "height": 4,
         "label": "Load, %",
         "chartType": "line",
         "legend": "false",
@@ -280,8 +686,8 @@
         "name": "",
         "group": "4a3f1d17.42abc4",
         "order": 1,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "label": "Storage",
         "chartType": "line",
         "legend": "true",
@@ -322,8 +728,8 @@
         "name": "",
         "group": "8e72d94d.e2b8c8",
         "order": 2,
-        "width": "0",
-        "height": "0",
+        "width": 0,
+        "height": 0,
         "gtype": "donut",
         "title": "RAM usage",
         "label": "%",
@@ -390,8 +796,8 @@
         "name": "",
         "group": "2631142d.86f8fc",
         "order": 2,
-        "width": "3",
-        "height": "3",
+        "width": 3,
+        "height": 3,
         "gtype": "gage",
         "title": "CPU Temp",
         "label": "°C",
@@ -498,8 +904,8 @@
         "name": "",
         "group": "2631142d.86f8fc",
         "order": 4,
-        "width": "6",
-        "height": "3",
+        "width": 6,
+        "height": 3,
         "label": "Temperature, °C",
         "chartType": "line",
         "legend": "false",
@@ -652,9 +1058,9 @@
         "z": "9f3346aa.d4fc48",
         "name": "Next",
         "group": "c552b4f6.efaca8",
-        "order": 3,
-        "width": "1",
-        "height": "1",
+        "order": 4,
+        "width": 1,
+        "height": 1,
         "passthru": false,
         "label": "",
         "color": "",
@@ -688,9 +1094,9 @@
         "z": "9f3346aa.d4fc48",
         "name": "Prev",
         "group": "c552b4f6.efaca8",
-        "order": 1,
-        "width": "1",
-        "height": "1",
+        "order": 2,
+        "width": 1,
+        "height": 1,
         "passthru": false,
         "label": "",
         "color": "",
@@ -713,9 +1119,9 @@
         "z": "9f3346aa.d4fc48",
         "name": "Refresh",
         "group": "c552b4f6.efaca8",
-        "order": 2,
-        "width": "1",
-        "height": "1",
+        "order": 3,
+        "width": 1,
+        "height": 1,
         "passthru": false,
         "label": "",
         "color": "",
@@ -773,7 +1179,7 @@
         "type": "ui_text",
         "z": "9f3346aa.d4fc48",
         "group": "c552b4f6.efaca8",
-        "order": 0,
+        "order": 1,
         "width": 0,
         "height": 0,
         "name": "Date time",
