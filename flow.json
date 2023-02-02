@@ -1694,11 +1694,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "plc/control_fan",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 610,
+        "x": 640,
         "y": 80,
         "wires": []
     }
