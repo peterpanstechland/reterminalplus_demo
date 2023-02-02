@@ -1742,7 +1742,7 @@
         "id": "80059560c08bb07f",
         "type": "random",
         "z": "57933f921577a835",
-        "name": "",
+        "name": "fan_stats",
         "low": "1",
         "high": "0",
         "inte": "true",
