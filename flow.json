@@ -1571,7 +1571,9 @@
         "x": 385.1111145019531,
         "y": 271.33335876464844,
         "wires": [
-            [],
+            [
+                "68aebe082b087792"
+            ],
             [
                 "fd49162918b096f6"
             ]
@@ -1745,6 +1747,34 @@
         "className": "",
         "x": 570,
         "y": 340,
+        "wires": []
+    },
+    {
+        "id": "68aebe082b087792",
+        "type": "ui_gauge",
+        "z": "57933f921577a835",
+        "name": "",
+        "group": "315f5223aeb1ca5d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "CPU Temperature",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 240,
         "wires": []
     }
 ]
