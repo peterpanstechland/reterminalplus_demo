@@ -1520,33 +1520,6 @@
         "wires": []
     },
     {
-        "id": "9329284a.a945d8",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": "",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 320,
-        "y": 140,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "e37cb7c7.144868",
         "type": "switch",
         "z": "57933f921577a835",
