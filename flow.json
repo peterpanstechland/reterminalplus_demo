@@ -1711,10 +1711,27 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "60",
-        "payloadType": "str",
-        "x": 190,
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
         "y": 320,
+        "wires": [
+            [
+                "f52acbb540a49b49"
+            ]
+        ]
+    },
+    {
+        "id": "f52acbb540a49b49",
+        "type": "random",
+        "z": "57933f921577a835",
+        "name": "",
+        "low": 1,
+        "high": 10,
+        "inte": "true",
+        "property": "payload",
+        "x": 300,
+        "y": 380,
         "wires": [
             [
                 "e37cb7c7.144868"
