@@ -3,7 +3,7 @@
         "id": "511c193196243d63",
         "type": "tab",
         "label": "RPi Control",
-        "disabled": true,
+        "disabled": false,
         "info": "",
         "env": []
     },
