@@ -18,7 +18,7 @@
         "id": "2968a4fcf75e9496",
         "type": "tab",
         "label": "Aedes",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
