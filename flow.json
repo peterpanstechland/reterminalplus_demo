@@ -15,17 +15,17 @@
         "info": ""
     },
     {
-        "id": "57933f921577a835",
+        "id": "2968a4fcf75e9496",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "Aedes",
         "disabled": false,
         "info": "",
         "env": []
     },
     {
-        "id": "2968a4fcf75e9496",
+        "id": "57933f921577a835",
         "type": "tab",
-        "label": "Aedes",
+        "label": "Flow 3",
         "disabled": false,
         "info": "",
         "env": []
@@ -264,6 +264,12 @@
         "className": ""
     },
     {
+        "id": "2835e976.d07ea6",
+        "type": "pac-device",
+        "address": "restpac.groov.com",
+        "protocol": "http"
+    },
+    {
         "id": "2653a0b0.26d638",
         "type": "ui_gauge",
         "z": "511c193196243d63",
@@ -283,8 +289,8 @@
             "#e6e600",
             "#ca3838"
         ],
-        "x": 1270,
-        "y": 2220,
+        "x": 690,
+        "y": 80,
         "wires": []
     },
     {
@@ -298,8 +304,8 @@
         "timer": "",
         "winHide": false,
         "name": "RPi Temp.",
-        "x": 910,
-        "y": 2220,
+        "x": 330,
+        "y": 80,
         "wires": [
             [
                 "fa5b499.e176cb8"
@@ -319,8 +325,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 704.5,
-        "y": 2228.25,
+        "x": 124.5,
+        "y": 88.25,
         "wires": [
             [
                 "fba68adf.14e13",
@@ -340,8 +346,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1090,
-        "y": 2220,
+        "x": 510,
+        "y": 80,
         "wires": [
             [
                 "2653a0b0.26d638",
@@ -365,8 +371,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 680,
-        "y": 2600,
+        "x": 100,
+        "y": 460,
         "wires": [
             [
                 "1cf31554.2aaa63"
@@ -383,8 +389,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "Reboot",
-        "x": 898,
-        "y": 2600,
+        "x": 318,
+        "y": 460,
         "wires": [
             [],
             [],
@@ -407,8 +413,8 @@
         "payload": "",
         "payloadType": "str",
         "topic": "",
-        "x": 688.5,
-        "y": 2644.25,
+        "x": 108.5,
+        "y": 504.25,
         "wires": [
             [
                 "c409cae5.8e4128"
@@ -425,8 +431,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "Shutdown",
-        "x": 909.5,
-        "y": 2662.25,
+        "x": 329.5,
+        "y": 522.25,
         "wires": [
             [],
             [],
@@ -455,8 +461,8 @@
         "removeOlderUnit": "3600",
         "cutout": 0,
         "outputs": 2,
-        "x": 1270,
-        "y": 2260,
+        "x": 690,
+        "y": 120,
         "wires": [
             [],
             []
@@ -473,8 +479,8 @@
         "timer": "",
         "winHide": false,
         "name": "CPU Load",
-        "x": 910,
-        "y": 2300,
+        "x": 330,
+        "y": 160,
         "wires": [
             [
                 "b9372186.ed1a5"
@@ -494,8 +500,8 @@
         "timer": "",
         "winHide": false,
         "name": "Free Memory",
-        "x": 910,
-        "y": 2380,
+        "x": 330,
+        "y": 240,
         "wires": [
             [
                 "9b301b09.8c0468"
@@ -528,8 +534,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 2300,
+        "x": 690,
+        "y": 160,
         "wires": []
     },
     {
@@ -556,8 +562,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 2380,
+        "x": 690,
+        "y": 240,
         "wires": []
     },
     {
@@ -570,8 +576,8 @@
         "useSpawn": "",
         "timer": "",
         "name": "Disk Usage",
-        "x": 910,
-        "y": 2460,
+        "x": 330,
+        "y": 320,
         "wires": [
             [
                 "d70b7556.a0a9e"
@@ -600,8 +606,8 @@
             "#e6e600",
             "#ca3838"
         ],
-        "x": 1270,
-        "y": 2460,
+        "x": 690,
+        "y": 320,
         "wires": []
     },
     {
@@ -612,8 +618,8 @@
         "func": "var re = /([0-9]{2})%/\nvar idx = msg.payload.search(re);\nvar str = msg.payload;\nif (idx >=0) {\n    str = msg.payload.substring(idx, idx + 2);\n}\nmsg.payload = str;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 1090,
-        "y": 2460,
+        "x": 510,
+        "y": 320,
         "wires": [
             [
                 "7ca6ecb.7512014"
@@ -631,8 +637,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 710,
-        "y": 2460,
+        "x": 130,
+        "y": 320,
         "wires": [
             [
                 "270f61f0.9af05e"
@@ -1497,5 +1503,204 @@
         "x": 490,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "9329284a.a945d8",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "17a8e46d.63d23c"
+            ]
+        ]
+    },
+    {
+        "id": "17a8e46d.63d23c",
+        "type": "pac-read",
+        "z": "57933f921577a835",
+        "device": "2835e976.d07ea6",
+        "dataType": "ana-input",
+        "tagName": "Lamp_Temperature",
+        "tableStartIndex": "",
+        "tableLength": "",
+        "value": "",
+        "valueType": "msg.payload",
+        "topic": "",
+        "topicType": "none",
+        "name": "read lamp temp",
+        "x": 384,
+        "y": 198.44442749023438,
+        "wires": [
+            [
+                "e37cb7c7.144868"
+            ]
+        ]
+    },
+    {
+        "id": "590532aa.7acabc",
+        "type": "pac-write",
+        "z": "57933f921577a835",
+        "device": "2835e976.d07ea6",
+        "dataType": "dig-output",
+        "tagName": "Lamp_output",
+        "tableStartIndex": "",
+        "value": "TRUE",
+        "valueType": "value",
+        "name": "Turn lamp ON",
+        "x": 1021.22216796875,
+        "y": 308.7777099609375,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "77cd5c72.e9c954",
+        "type": "pac-write",
+        "z": "57933f921577a835",
+        "device": "2835e976.d07ea6",
+        "dataType": "dig-output",
+        "tagName": "Lamp_output",
+        "tableStartIndex": "",
+        "value": "FALSE",
+        "valueType": "value",
+        "name": "Turn lamp OFF",
+        "x": 1020.444580078125,
+        "y": 234.77780151367188,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "39d3a7c5.040c88",
+        "type": "pac-read",
+        "z": "57933f921577a835",
+        "device": "2835e976.d07ea6",
+        "dataType": "dig-output",
+        "tagName": "Lamp_output",
+        "tableStartIndex": "",
+        "tableLength": "",
+        "value": "",
+        "valueType": "msg.payload",
+        "topic": "",
+        "topicType": "none",
+        "name": "(> 90) read lamp status",
+        "x": 614.9999389648438,
+        "y": 234.77777099609375,
+        "wires": [
+            [
+                "a140480c.114488"
+            ]
+        ]
+    },
+    {
+        "id": "e37cb7c7.144868",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": " > 90 or < 85 ?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "90",
+                "vt": "num"
+            },
+            {
+                "t": "lt",
+                "v": "85",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 2,
+        "x": 385.1111145019531,
+        "y": 271.33335876464844,
+        "wires": [
+            [
+                "39d3a7c5.040c88"
+            ],
+            [
+                "5e776e8f.c906a"
+            ]
+        ]
+    },
+    {
+        "id": "5e776e8f.c906a",
+        "type": "pac-read",
+        "z": "57933f921577a835",
+        "device": "2835e976.d07ea6",
+        "dataType": "dig-output",
+        "tagName": "Lamp_output",
+        "tableStartIndex": "",
+        "tableLength": "",
+        "value": "",
+        "valueType": "msg.payload",
+        "topic": "",
+        "topicType": "none",
+        "name": "(< 85) read lamp status ",
+        "x": 613.1111145019531,
+        "y": 309,
+        "wires": [
+            [
+                "6f4799f.995e768"
+            ]
+        ]
+    },
+    {
+        "id": "6f4799f.995e768",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "Is lamp OFF ?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "false",
+        "outputs": 1,
+        "x": 829.77783203125,
+        "y": 308.88885498046875,
+        "wires": [
+            [
+                "590532aa.7acabc"
+            ]
+        ]
+    },
+    {
+        "id": "a140480c.114488",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "Is lamp ON ?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "outputs": 1,
+        "x": 821.22216796875,
+        "y": 234.888916015625,
+        "wires": [
+            [
+                "77cd5c72.e9c954"
+            ]
+        ]
     }
 ]
