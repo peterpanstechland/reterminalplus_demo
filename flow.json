@@ -1706,9 +1706,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "payload"
             }
         ],
         "repeat": "",
@@ -1716,7 +1713,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "80",
+        "payload": "60",
         "payloadType": "str",
         "x": 190,
         "y": 320,
