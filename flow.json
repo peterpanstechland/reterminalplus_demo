@@ -283,17 +283,6 @@
         "hidden": false
     },
     {
-        "id": "2c3f285.7dce7d8",
-        "type": "server",
-        "name": "Home-Assistant",
-        "legacy": false,
-        "addon": false,
-        "rejectUnauthorizedCerts": true,
-        "ha_boolean": "y|yes|true|on|home|open",
-        "connectionDelay": true,
-        "cacheJson": true
-    },
-    {
         "id": "2653a0b0.26d638",
         "type": "ui_gauge",
         "z": "511c193196243d63",
@@ -1565,10 +1554,12 @@
         "y": 260,
         "wires": [
             [
-                "0d235fa2d8dea565"
+                "0d235fa2d8dea565",
+                "15662620b9a1b51a"
             ],
             [
-                "a1fa129d5bd93457"
+                "a1fa129d5bd93457",
+                "15662620b9a1b51a"
             ]
         ]
     },
@@ -1706,7 +1697,8 @@
         "y": 220,
         "wires": [
             [
-                "329a875d3d49c36d"
+                "329a875d3d49c36d",
+                "15662620b9a1b51a"
             ]
         ]
     },
@@ -1797,5 +1789,27 @@
         "x": 910,
         "y": 480,
         "wires": []
+    },
+    {
+        "id": "15662620b9a1b51a",
+        "type": "join",
+        "z": "57933f921577a835",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": "false",
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "x": 550,
+        "y": 580,
+        "wires": [
+            []
+        ]
     }
 ]
