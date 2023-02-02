@@ -1635,23 +1635,6 @@
         "wires": []
     },
     {
-        "id": "b84742494e290af4",
-        "type": "ui_text",
-        "z": "57933f921577a835",
-        "group": "1890881e.83819",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "fan on",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 890,
-        "y": 420,
-        "wires": []
-    },
-    {
         "id": "018236689cfc098e",
         "type": "inject",
         "z": "57933f921577a835",
@@ -1711,7 +1694,7 @@
                 "p": "payload"
             }
         ],
-        "repeat": "",
+        "repeat": "1",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -1765,6 +1748,13 @@
                 "pt": "msg",
                 "to": "false",
                 "tot": "bool"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
             }
         ],
         "action": "",
@@ -1772,13 +1762,30 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
+        "x": 600,
         "y": 480,
         "wires": [
             [
                 "3518ae512a871ae6"
             ]
         ]
+    },
+    {
+        "id": "b84742494e290af4",
+        "type": "ui_text",
+        "z": "57933f921577a835",
+        "group": "1890881e.83819",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "fan on",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 890,
+        "y": 420,
+        "wires": []
     },
     {
         "id": "3518ae512a871ae6",
