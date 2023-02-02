@@ -1441,7 +1441,7 @@
         "id": "35e3dff474d9ee48",
         "type": "mqtt in",
         "z": "2968a4fcf75e9496",
-        "name": "MQTT Subscriber",
+        "name": "cputemp",
         "topic": "sensor/cputemp",
         "qos": "0",
         "datatype": "auto",
@@ -1450,7 +1450,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 280,
+        "x": 260,
         "y": 460,
         "wires": [
             [
