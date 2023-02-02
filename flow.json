@@ -1647,14 +1647,14 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload\n// var str = msg.payload\nreturn msg;\n",
+        "func": "var str = msg.payload\n\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 160,
+        "y": 440,
         "wires": [
             [
                 "a140480c.114488",
