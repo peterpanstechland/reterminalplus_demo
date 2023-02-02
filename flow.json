@@ -1708,18 +1708,17 @@
                 "p": "payload"
             },
             {
-                "p": "topic",
-                "vt": "str"
+                "p": "payload"
             }
         ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
-        "topic": "80",
-        "payload": "",
-        "payloadType": "date",
-        "x": 210,
+        "topic": "",
+        "payload": "80",
+        "payloadType": "str",
+        "x": 190,
         "y": 320,
         "wires": [
             [
