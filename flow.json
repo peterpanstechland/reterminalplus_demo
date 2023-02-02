@@ -1833,7 +1833,7 @@
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
-        "reduceInitType": "",
+        "reduceInitType": "num",
         "reduceFixup": "",
         "x": 770,
         "y": 700,
