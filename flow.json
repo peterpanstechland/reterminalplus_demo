@@ -1562,54 +1562,6 @@
         ]
     },
     {
-        "id": "6f4799f.995e768",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "Is lamp OFF ?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 820,
-        "y": 300,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a140480c.114488",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "Is lamp ON ?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 821.22216796875,
-        "y": 234.888916015625,
-        "wires": [
-            [
-                "329a875d3d49c36d"
-            ]
-        ]
-    },
-    {
         "id": "f1885fc79fae6331",
         "type": "mqtt out",
         "z": "57933f921577a835",
@@ -1678,8 +1630,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1090,
-        "y": 240,
+        "x": 610,
+        "y": 200,
         "wires": []
     },
     {
@@ -1746,23 +1698,6 @@
         ]
     },
     {
-        "id": "80059560c08bb07f",
-        "type": "random",
-        "z": "57933f921577a835",
-        "name": "fan_stats",
-        "low": "1",
-        "high": "0",
-        "inte": "true",
-        "property": "payload",
-        "x": 420,
-        "y": 180,
-        "wires": [
-            [
-                "0d235fa2d8dea565"
-            ]
-        ]
-    },
-    {
         "id": "035e28ee2ba1c864",
         "type": "inject",
         "z": "57933f921577a835",
@@ -1787,7 +1722,7 @@
         "y": 220,
         "wires": [
             [
-                "80059560c08bb07f"
+                "329a875d3d49c36d"
             ]
         ]
     },
