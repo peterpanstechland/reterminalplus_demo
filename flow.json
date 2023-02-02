@@ -1647,7 +1647,7 @@
         "type": "function",
         "z": "57933f921577a835",
         "name": "function 1",
-        "func": "var str = msg.payload\n    msg.payload = str.substring(5, 9);\nreturn msg;\n",
+        "func": "var str = msg.payload\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
