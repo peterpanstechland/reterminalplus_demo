@@ -1574,7 +1574,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 200,
+        "x": 210,
         "y": 300,
         "wires": [
             [
@@ -1725,7 +1725,7 @@
         "wires": [
             [
                 "ffa194144317076d",
-                "32365d29c693005e"
+                "59a68c10f0a2db92"
             ]
         ]
     },
@@ -1873,6 +1873,22 @@
         "statusType": "auto",
         "x": 1120,
         "y": 100,
+        "wires": []
+    },
+    {
+        "id": "59a68c10f0a2db92",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 320,
         "wires": []
     },
     {
