@@ -2222,7 +2222,9 @@
         "x": 980,
         "y": 1800,
         "wires": [
-            []
+            [
+                "87146f2b58f6c201"
+            ]
         ]
     },
     {
@@ -2681,6 +2683,23 @@
         "statusType": "auto",
         "x": 1490,
         "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "87146f2b58f6c201",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1250,
+        "y": 1800,
         "wires": []
     }
 ]
