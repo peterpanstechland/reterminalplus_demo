@@ -2557,27 +2557,6 @@
         ]
     },
     {
-        "id": "27f5db8a3a3844c2",
-        "type": "mqtt in",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "plc/fan_stats",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "47a469b15c9c5f27",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 750,
-        "y": 1420,
-        "wires": [
-            [
-                "d250ccf73da7decd"
-            ]
-        ]
-    },
-    {
         "id": "49e454af09273658",
         "type": "debug",
         "z": "57933f921577a835",
@@ -2593,5 +2572,51 @@
         "x": 1190,
         "y": 1360,
         "wires": []
+    },
+    {
+        "id": "4ca53cd524f278c3",
+        "type": "random",
+        "z": "57933f921577a835",
+        "name": "",
+        "low": "1",
+        "high": "0",
+        "inte": "true",
+        "property": "payload",
+        "x": 680,
+        "y": 1420,
+        "wires": [
+            [
+                "d250ccf73da7decd"
+            ]
+        ]
+    },
+    {
+        "id": "1686b543416ade8f",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 500,
+        "y": 1420,
+        "wires": [
+            [
+                "4ca53cd524f278c3"
+            ]
+        ]
     }
 ]
