@@ -2646,5 +2646,25 @@
         "x": 620,
         "y": 1400,
         "wires": []
+    },
+    {
+        "id": "bc9cf0a98e6d434c",
+        "type": "toggle",
+        "z": "57933f921577a835",
+        "name": "toggle_gpio11",
+        "onOffTopic": "gpio11",
+        "onValue": "1",
+        "onType": "str",
+        "offValue": "0",
+        "offType": "str",
+        "toggleTopic": "gpio11",
+        "toggleValue": "",
+        "toggleType": "str",
+        "passOnOff": "",
+        "x": 1320,
+        "y": 1780,
+        "wires": [
+            []
+        ]
     }
 ]
