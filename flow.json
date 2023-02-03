@@ -2175,56 +2175,6 @@
         ]
     },
     {
-        "id": "532d9d154ae2a5af",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "check -> \"0\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 770,
-        "y": 1780,
-        "wires": [
-            [
-                "fd3ef5021a768c1a"
-            ]
-        ]
-    },
-    {
-        "id": "0f2372ca1f8bb23a",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "check -> \"1\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 770,
-        "y": 1820,
-        "wires": [
-            [
-                "fd3ef5021a768c1a"
-            ]
-        ]
-    },
-    {
         "id": "d250ccf73da7decd",
         "type": "change",
         "z": "57933f921577a835",
@@ -2232,7 +2182,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "fanstats",
+                "p": "fan_current_stats",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -2243,8 +2193,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 960,
-        "y": 1460,
+        "x": 980,
+        "y": 1480,
         "wires": [
             []
         ]
@@ -2257,7 +2207,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "check",
+                "p": "check_fan_stat",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -2751,29 +2701,33 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1480,
-        "y": 1360,
+        "x": 740,
+        "y": 1480,
         "wires": [
             [
-                "5295c4bcc95c301a"
+                "d250ccf73da7decd"
             ]
         ]
     },
     {
-        "id": "5295c4bcc95c301a",
-        "type": "debug",
+        "id": "d1326ad3a588b889",
+        "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1710,
-        "y": 1360,
-        "wires": []
+        "topic": "plc/fan_control",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 740,
+        "y": 1800,
+        "wires": [
+            [
+                "fd3ef5021a768c1a"
+            ]
+        ]
     }
 ]
