@@ -2630,6 +2630,13 @@
                 "pt": "msg",
                 "to": "fan_control",
                 "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "123",
+                "tot": "str"
             }
         ],
         "action": "",
