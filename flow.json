@@ -1945,7 +1945,7 @@
         "toggleTopic": "fan_control",
         "toggleValue": "123",
         "toggleType": "str",
-        "passOnOff": "ifChanged",
+        "passOnOff": "always",
         "x": 710,
         "y": 220,
         "wires": [
