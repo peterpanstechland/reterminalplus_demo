@@ -685,7 +685,7 @@
         "type": "mqtt out",
         "z": "511c193196243d63",
         "name": "",
-        "topic": "gpio/pin3",
+        "topic": "gpio/pin11",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -694,7 +694,7 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 580,
+        "x": 590,
         "y": 880,
         "wires": []
     },
@@ -2610,11 +2610,11 @@
         "wires": []
     },
     {
-        "id": "7a2d7845ad1f6770",
+        "id": "06a8ea2b09034514",
         "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "topic": "sensor/cputemp",
+        "topic": "gpio/pin11",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
