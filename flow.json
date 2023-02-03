@@ -25,7 +25,15 @@
     {
         "id": "57933f921577a835",
         "type": "tab",
-        "label": "Flow 3",
+        "label": "Fan_Control",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "539608b79d63a004",
+        "type": "tab",
+        "label": "PLC_FAN_GPIO",
         "disabled": false,
         "info": "",
         "env": []
@@ -1529,177 +1537,6 @@
         "wires": []
     },
     {
-        "id": "e37cb7c7.144868",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": " > 70 or < 65 ?",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "gt",
-                "v": "70",
-                "vt": "num"
-            },
-            {
-                "t": "lt",
-                "v": "65",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 2,
-        "x": 420,
-        "y": 320,
-        "wires": [
-            [
-                "7efd031a02eb3641"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "0669e8b9926c71f8",
-        "type": "mqtt in",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "plc/fan_stats",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "47a469b15c9c5f27",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 390,
-        "y": 80,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "329a875d3d49c36d",
-        "type": "ui_text",
-        "z": "57933f921577a835",
-        "group": "1890881e.83819",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "text",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 610,
-        "y": 200,
-        "wires": []
-    },
-    {
-        "id": "018236689cfc098e",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "temp",
-        "x": 190,
-        "y": 320,
-        "wires": [
-            [
-                "f52acbb540a49b49"
-            ]
-        ]
-    },
-    {
-        "id": "f52acbb540a49b49",
-        "type": "random",
-        "z": "57933f921577a835",
-        "name": "",
-        "low": "60",
-        "high": "80",
-        "inte": "true",
-        "property": "payload",
-        "x": 300,
-        "y": 380,
-        "wires": [
-            [
-                "e37cb7c7.144868"
-            ]
-        ]
-    },
-    {
-        "id": "035e28ee2ba1c864",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "",
-        "props": [
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": 0.1,
-        "topic": "fanstat",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 250,
-        "y": 220,
-        "wires": [
-            [
-                "329a875d3d49c36d"
-            ]
-        ]
-    },
-    {
-        "id": "7efd031a02eb3641",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 720,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "91315b46c906b388",
-        "type": "function",
-        "z": "57933f921577a835",
-        "name": "function 1",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 500,
-        "y": 460,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "fd3ef5021a768c1a",
         "type": "change",
         "z": "57933f921577a835",
@@ -1718,47 +1555,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
-        "y": 1600,
+        "x": 460,
+        "y": 300,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "5d0b75e49fe4bc90",
-        "type": "rpi-gpio in",
-        "z": "57933f921577a835",
-        "name": "",
-        "pin": "22",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 950,
-        "y": 1940,
-        "wires": [
-            [
-                "68b1d8480f57accb"
-            ]
-        ]
-    },
-    {
-        "id": "68b1d8480f57accb",
-        "type": "mqtt out",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "gpio/pin11",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "47a469b15c9c5f27",
-        "x": 1190,
-        "y": 1940,
-        "wires": []
     },
     {
         "id": "d1326ad3a588b889",
@@ -1773,32 +1574,11 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 460,
-        "y": 1600,
+        "x": 220,
+        "y": 300,
         "wires": [
             [
                 "fd3ef5021a768c1a"
-            ]
-        ]
-    },
-    {
-        "id": "f8e42ccdfc815f13",
-        "type": "mqtt in",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "plc/fan_control",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "47a469b15c9c5f27",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 980,
-        "y": 2000,
-        "wires": [
-            [
-                "78e91716cf16b6ad"
             ]
         ]
     },
@@ -1821,8 +1601,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 700,
-        "y": 1460,
+        "x": 460,
+        "y": 160,
         "wires": [
             [
                 "47d85c04d1f5f541",
@@ -1847,8 +1627,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 910,
-        "y": 1460,
+        "x": 670,
+        "y": 160,
         "wires": [
             [
                 "d23582ca1a62a659"
@@ -1872,8 +1652,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 910,
-        "y": 1540,
+        "x": 670,
+        "y": 240,
         "wires": [
             [
                 "7a165e8d3fa0377a"
@@ -1889,8 +1669,8 @@
         "high": "80",
         "inte": "true",
         "property": "payload",
-        "x": 660,
-        "y": 1540,
+        "x": 420,
+        "y": 240,
         "wires": [
             [
                 "d250ccf73da7decd"
@@ -1913,8 +1693,8 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "temp",
-        "x": 450,
-        "y": 1540,
+        "x": 210,
+        "y": 240,
         "wires": [
             [
                 "7bae2d86c932b0f6"
@@ -1938,8 +1718,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1170,
-        "y": 1540,
+        "x": 930,
+        "y": 240,
         "wires": [
             [
                 "ffa194144317076d"
@@ -1963,8 +1743,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1170,
-        "y": 1480,
+        "x": 930,
+        "y": 180,
         "wires": [
             [
                 "6c4daa6e030815ac"
@@ -1990,8 +1770,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1460,
-        "y": 1460,
+        "x": 1220,
+        "y": 160,
         "wires": [
             [
                 "695eebfd8e14292e"
@@ -2012,8 +1792,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 1680,
-        "y": 1400,
+        "x": 1440,
+        "y": 100,
         "wires": []
     },
     {
@@ -2035,8 +1815,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1460,
-        "y": 1540,
+        "x": 1220,
+        "y": 240,
         "wires": [
             [
                 "695eebfd8e14292e"
@@ -2044,9 +1824,66 @@
         ]
     },
     {
+        "id": "5d0b75e49fe4bc90",
+        "type": "rpi-gpio in",
+        "z": "539608b79d63a004",
+        "name": "",
+        "pin": "22",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "68b1d8480f57accb"
+            ]
+        ]
+    },
+    {
+        "id": "68b1d8480f57accb",
+        "type": "mqtt out",
+        "z": "539608b79d63a004",
+        "name": "",
+        "topic": "gpio/pin11",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 430,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f8e42ccdfc815f13",
+        "type": "mqtt in",
+        "z": "539608b79d63a004",
+        "name": "",
+        "topic": "plc/fan_control",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "78e91716cf16b6ad"
+            ]
+        ]
+    },
+    {
         "id": "78e91716cf16b6ad",
         "type": "change",
-        "z": "57933f921577a835",
+        "z": "539608b79d63a004",
         "name": "payload to flow",
         "rules": [
             {
@@ -2069,8 +1906,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1240,
-        "y": 2020,
+        "x": 480,
+        "y": 220,
         "wires": [
             [
                 "bf4080c07e339105"
@@ -2080,7 +1917,7 @@
     {
         "id": "bf4080c07e339105",
         "type": "toggle",
-        "z": "57933f921577a835",
+        "z": "539608b79d63a004",
         "name": "toggle_fan",
         "onOffTopic": "gpio/pin11",
         "onValue": "1",
@@ -2091,8 +1928,8 @@
         "toggleValue": "123",
         "toggleType": "str",
         "passOnOff": "ifChanged",
-        "x": 1470,
-        "y": 2020,
+        "x": 710,
+        "y": 220,
         "wires": [
             [
                 "35a61157dd510d5b",
@@ -2103,7 +1940,7 @@
     {
         "id": "35a61157dd510d5b",
         "type": "debug",
-        "z": "57933f921577a835",
+        "z": "539608b79d63a004",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -2113,14 +1950,14 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1690,
-        "y": 2020,
+        "x": 930,
+        "y": 220,
         "wires": []
     },
     {
         "id": "2cb753a367b6c8ec",
         "type": "ui_button",
-        "z": "57933f921577a835",
+        "z": "539608b79d63a004",
         "name": "",
         "group": "c5f1b8aa.45bc08",
         "order": 2,
@@ -2137,8 +1974,8 @@
         "payloadType": "str",
         "topic": "fan_control",
         "topicType": "str",
-        "x": 1230,
-        "y": 2080,
+        "x": 470,
+        "y": 280,
         "wires": [
             [
                 "bf4080c07e339105"
@@ -2148,7 +1985,7 @@
     {
         "id": "214c2d79117c1a4b",
         "type": "mqtt out",
-        "z": "57933f921577a835",
+        "z": "539608b79d63a004",
         "name": "",
         "topic": "plc/fan_stat",
         "qos": "",
@@ -2159,8 +1996,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 1690,
-        "y": 2080,
+        "x": 930,
+        "y": 280,
         "wires": []
     }
 ]
