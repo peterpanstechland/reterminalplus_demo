@@ -1892,6 +1892,56 @@
         "wires": []
     },
     {
+        "id": "a95787ca43c5ab62",
+        "type": "ui_button",
+        "z": "57933f921577a835",
+        "name": "",
+        "group": "c5f1b8aa.45bc08",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Fan ON/OFF",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "123",
+        "payloadType": "str",
+        "topic": "fan_control",
+        "topicType": "str",
+        "x": 870,
+        "y": 480,
+        "wires": [
+            [
+                "89659dcdb5f07540"
+            ]
+        ]
+    },
+    {
+        "id": "89659dcdb5f07540",
+        "type": "toggle",
+        "z": "57933f921577a835",
+        "name": "toggle_fan",
+        "onOffTopic": "gpio/pin11",
+        "onValue": "1",
+        "onType": "str",
+        "offValue": "0",
+        "offType": "str",
+        "toggleTopic": "fan_control",
+        "toggleValue": "123",
+        "toggleType": "str",
+        "passOnOff": "always",
+        "x": 1190,
+        "y": 460,
+        "wires": [
+            [
+                "695eebfd8e14292e"
+            ]
+        ]
+    },
+    {
         "id": "f8e42ccdfc815f13",
         "type": "mqtt in",
         "z": "539608b79d63a004",
@@ -1986,34 +2036,6 @@
         "x": 930,
         "y": 220,
         "wires": []
-    },
-    {
-        "id": "2cb753a367b6c8ec",
-        "type": "ui_button",
-        "z": "539608b79d63a004",
-        "name": "",
-        "group": "c5f1b8aa.45bc08",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Fan ON/OFF",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "123",
-        "payloadType": "str",
-        "topic": "fan_control",
-        "topicType": "str",
-        "x": 470,
-        "y": 280,
-        "wires": [
-            [
-                "bf4080c07e339105"
-            ]
-        ]
     },
     {
         "id": "214c2d79117c1a4b",
