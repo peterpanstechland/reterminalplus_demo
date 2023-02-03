@@ -663,42 +663,6 @@
         ]
     },
     {
-        "id": "5d0b75e49fe4bc90",
-        "type": "rpi-gpio in",
-        "z": "511c193196243d63",
-        "name": "",
-        "pin": "22",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 350,
-        "y": 880,
-        "wires": [
-            [
-                "68b1d8480f57accb"
-            ]
-        ]
-    },
-    {
-        "id": "68b1d8480f57accb",
-        "type": "mqtt out",
-        "z": "511c193196243d63",
-        "name": "",
-        "topic": "gpio/pin11",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "47a469b15c9c5f27",
-        "x": 590,
-        "y": 880,
-        "wires": []
-    },
-    {
         "id": "6129eac0.5bdec4",
         "type": "inject",
         "z": "9f3346aa.d4fc48",
@@ -2652,7 +2616,7 @@
         "type": "toggle",
         "z": "57933f921577a835",
         "name": "toggle_fan",
-        "onOffTopic": "fan_stat",
+        "onOffTopic": "gpio/pin11",
         "onValue": "1",
         "onType": "str",
         "offValue": "0",
@@ -2736,5 +2700,41 @@
                 "bc9cf0a98e6d434c"
             ]
         ]
+    },
+    {
+        "id": "5d0b75e49fe4bc90",
+        "type": "rpi-gpio in",
+        "z": "57933f921577a835",
+        "name": "",
+        "pin": "22",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 2190,
+        "y": 1280,
+        "wires": [
+            [
+                "68b1d8480f57accb"
+            ]
+        ]
+    },
+    {
+        "id": "68b1d8480f57accb",
+        "type": "mqtt out",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "gpio/pin11",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 2430,
+        "y": 1280,
+        "wires": []
     }
 ]
