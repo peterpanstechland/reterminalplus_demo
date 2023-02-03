@@ -2670,7 +2670,7 @@
         "id": "f88002cec79fefef",
         "type": "debug",
         "z": "57933f921577a835",
-        "name": "",
+        "name": "0",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2679,8 +2679,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 1720,
+        "x": 1570,
+        "y": 1700,
         "wires": []
     },
     {
@@ -2763,8 +2763,25 @@
         "y": 1620,
         "wires": [
             [
-                "f88002cec79fefef"
+                "7f991a01192ac2ce"
             ]
         ]
+    },
+    {
+        "id": "7f991a01192ac2ce",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1590,
+        "y": 1740,
+        "wires": []
     }
 ]
