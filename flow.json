@@ -2179,23 +2179,6 @@
         ]
     },
     {
-        "id": "057be5690fa3dbc0",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "fan_control",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1250,
-        "y": 1940,
-        "wires": []
-    },
-    {
         "id": "5d0b75e49fe4bc90",
         "type": "rpi-gpio in",
         "z": "57933f921577a835",
@@ -2322,8 +2305,7 @@
         "y": 1460,
         "wires": [
             [
-                "d23582ca1a62a659",
-                "65675edeaf30d07d"
+                "d23582ca1a62a659"
             ]
         ]
     },
@@ -2414,27 +2396,9 @@
         "y": 1540,
         "wires": [
             [
-                "7f991a01192ac2ce",
                 "ffa194144317076d"
             ]
         ]
-    },
-    {
-        "id": "7f991a01192ac2ce",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1470,
-        "y": 1720,
-        "wires": []
     },
     {
         "id": "d23582ca1a62a659",
@@ -2507,23 +2471,6 @@
         "wires": []
     },
     {
-        "id": "65675edeaf30d07d",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1250,
-        "y": 1380,
-        "wires": []
-    },
-    {
         "id": "ffa194144317076d",
         "type": "change",
         "z": "57933f921577a835",
@@ -2580,7 +2527,6 @@
         "y": 2020,
         "wires": [
             [
-                "057be5690fa3dbc0",
                 "bf4080c07e339105"
             ]
         ]
