@@ -2787,28 +2787,6 @@
         "y": 1980,
         "wires": [
             [
-                "a8c3e6ea4dde2473"
-            ]
-        ]
-    },
-    {
-        "id": "a8c3e6ea4dde2473",
-        "type": "toggle",
-        "z": "57933f921577a835",
-        "name": "toggle_fan",
-        "onOffTopic": "gpio/pin11",
-        "onValue": "1",
-        "onType": "str",
-        "offValue": "0",
-        "offType": "str",
-        "toggleTopic": "fan_control",
-        "toggleValue": "123",
-        "toggleType": "str",
-        "passOnOff": "ifChanged",
-        "x": 1750,
-        "y": 1980,
-        "wires": [
-            [
                 "3ae04d90fae31b10"
             ]
         ]
