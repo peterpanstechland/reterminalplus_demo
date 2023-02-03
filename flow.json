@@ -2801,7 +2801,7 @@
         "onType": "str",
         "offValue": "0",
         "offType": "str",
-        "toggleTopic": "fan_stat",
+        "toggleTopic": "fan_control",
         "toggleValue": "123",
         "toggleType": "str",
         "passOnOff": "ifChanged",
