@@ -663,6 +663,42 @@
         ]
     },
     {
+        "id": "5d0b75e49fe4bc90",
+        "type": "rpi-gpio in",
+        "z": "511c193196243d63",
+        "name": "",
+        "pin": "2",
+        "intype": "tri",
+        "debounce": "25",
+        "read": false,
+        "bcm": true,
+        "x": 350,
+        "y": 880,
+        "wires": [
+            [
+                "68b1d8480f57accb"
+            ]
+        ]
+    },
+    {
+        "id": "68b1d8480f57accb",
+        "type": "mqtt out",
+        "z": "511c193196243d63",
+        "name": "",
+        "topic": "gpio/pin3",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 580,
+        "y": 880,
+        "wires": []
+    },
+    {
         "id": "6129eac0.5bdec4",
         "type": "inject",
         "z": "9f3346aa.d4fc48",
