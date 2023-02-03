@@ -2294,7 +2294,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1830,
+        "x": 1990,
         "y": 1480,
         "wires": []
     },
@@ -2754,8 +2754,8 @@
         "rules": [
             {
                 "t": "set",
-                "p": "check_fan_stat",
-                "pt": "flow",
+                "p": "fan_stat",
+                "pt": "msg",
                 "to": "1",
                 "tot": "str"
             }
