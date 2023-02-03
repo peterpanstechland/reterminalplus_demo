@@ -2648,8 +2648,29 @@
         "y": 2020,
         "wires": [
             [
-                "057be5690fa3dbc0"
+                "057be5690fa3dbc0",
+                "bf4080c07e339105"
             ]
+        ]
+    },
+    {
+        "id": "bf4080c07e339105",
+        "type": "toggle",
+        "z": "57933f921577a835",
+        "name": "toggle_fan",
+        "onOffTopic": "gpio/pin11",
+        "onValue": "1",
+        "onType": "str",
+        "offValue": "0",
+        "offType": "str",
+        "toggleTopic": "fan_control",
+        "toggleValue": "123",
+        "toggleType": "str",
+        "passOnOff": "ifChanged",
+        "x": 1470,
+        "y": 2020,
+        "wires": [
+            []
         ]
     }
 ]
