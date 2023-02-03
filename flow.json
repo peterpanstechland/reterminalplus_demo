@@ -2514,8 +2514,7 @@
         "y": 2000,
         "wires": [
             [
-                "057be5690fa3dbc0",
-                "ae797fef0f3022bd"
+                "057be5690fa3dbc0"
             ]
         ]
     },
@@ -2756,40 +2755,6 @@
         "x": 1800,
         "y": 1420,
         "wires": []
-    },
-    {
-        "id": "ae797fef0f3022bd",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "fan_control",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "123",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1540,
-        "y": 1980,
-        "wires": [
-            [
-                "3ae04d90fae31b10"
-            ]
-        ]
     },
     {
         "id": "3ae04d90fae31b10",
