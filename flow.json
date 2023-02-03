@@ -2754,9 +2754,9 @@
         "rules": [
             {
                 "t": "set",
-                "p": "fan_stat",
+                "p": "payload",
                 "pt": "msg",
-                "to": "123",
+                "to": "1",
                 "tot": "str"
             }
         ],
