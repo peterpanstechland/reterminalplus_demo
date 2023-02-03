@@ -2333,27 +2333,10 @@
         "wires": []
     },
     {
-        "id": "49e454af09273658",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1190,
-        "y": 1360,
-        "wires": []
-    },
-    {
         "id": "057be5690fa3dbc0",
         "type": "debug",
         "z": "57933f921577a835",
-        "name": "temp",
+        "name": "fan_control",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -2362,8 +2345,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1110,
-        "y": 1680,
+        "x": 1250,
+        "y": 1940,
         "wires": []
     },
     {
@@ -2447,7 +2430,7 @@
         "icon": "",
         "payload": "123",
         "payloadType": "str",
-        "topic": "fan_stat",
+        "topic": "fan_control",
         "topicType": "str",
         "x": 1370,
         "y": 1200,
@@ -2527,11 +2510,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 1000,
-        "y": 1320,
+        "x": 980,
+        "y": 2000,
         "wires": [
             [
-                "49e454af09273658"
+                "057be5690fa3dbc0",
+                "ae797fef0f3022bd"
             ]
         ]
     },
@@ -2771,6 +2755,79 @@
         "broker": "47a469b15c9c5f27",
         "x": 1800,
         "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "ae797fef0f3022bd",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "fan_control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "123",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1540,
+        "y": 1980,
+        "wires": [
+            [
+                "a8c3e6ea4dde2473"
+            ]
+        ]
+    },
+    {
+        "id": "a8c3e6ea4dde2473",
+        "type": "toggle",
+        "z": "57933f921577a835",
+        "name": "toggle_fan",
+        "onOffTopic": "gpio/pin11",
+        "onValue": "1",
+        "onType": "str",
+        "offValue": "0",
+        "offType": "str",
+        "toggleTopic": "fan_stat",
+        "toggleValue": "123",
+        "toggleType": "str",
+        "passOnOff": "ifChanged",
+        "x": 1750,
+        "y": 1980,
+        "wires": [
+            [
+                "3ae04d90fae31b10"
+            ]
+        ]
+    },
+    {
+        "id": "3ae04d90fae31b10",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1970,
+        "y": 1980,
         "wires": []
     }
 ]
