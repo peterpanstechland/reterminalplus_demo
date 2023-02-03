@@ -2191,10 +2191,13 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 780,
+        "x": 820,
         "y": 1480,
         "wires": [
-            []
+            [
+                "47d85c04d1f5f541",
+                "e7d44c444059fac3"
+            ]
         ]
     },
     {
@@ -2573,9 +2576,7 @@
         "x": 520,
         "y": 1480,
         "wires": [
-            [
-                "d250ccf73da7decd"
-            ]
+            []
         ]
     },
     {
@@ -2583,7 +2584,7 @@
         "type": "switch",
         "z": "57933f921577a835",
         "name": "if (cpu_temp >= 70)",
-        "property": "payload",
+        "property": "cpu_temp",
         "propertyType": "msg",
         "rules": [
             {
@@ -2713,8 +2714,7 @@
         "y": 1560,
         "wires": [
             [
-                "47d85c04d1f5f541",
-                "e7d44c444059fac3"
+                "d250ccf73da7decd"
             ]
         ]
     },
