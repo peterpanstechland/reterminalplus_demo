@@ -2616,7 +2616,7 @@
         "name": "",
         "topic": "gpio/pin11",
         "qos": "2",
-        "datatype": "auto-detect",
+        "datatype": "json",
         "broker": "47a469b15c9c5f27",
         "nl": false,
         "rap": true,
