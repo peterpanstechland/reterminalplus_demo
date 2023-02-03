@@ -1564,7 +1564,7 @@
         "type": "mqtt out",
         "z": "57933f921577a835",
         "name": "",
-        "topic": "plc/control_fan",
+        "topic": "plc/fan_control",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -1573,8 +1573,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 1100,
-        "y": 120,
+        "x": 1880,
+        "y": 1280,
         "wires": []
     },
     {
@@ -2629,7 +2629,8 @@
         "y": 1200,
         "wires": [
             [
-                "3d5315dd49f6e44c"
+                "3d5315dd49f6e44c",
+                "f1885fc79fae6331"
             ]
         ]
     },
