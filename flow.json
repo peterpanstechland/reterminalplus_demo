@@ -667,7 +667,7 @@
         "type": "rpi-gpio in",
         "z": "511c193196243d63",
         "name": "",
-        "pin": "17",
+        "pin": "27",
         "intype": "tri",
         "debounce": "25",
         "read": false,
