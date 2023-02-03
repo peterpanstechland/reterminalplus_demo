@@ -2661,7 +2661,7 @@
         "toggleValue": "123",
         "toggleType": "str",
         "passOnOff": "ifChanged",
-        "x": 1680,
+        "x": 1640,
         "y": 1200,
         "wires": [
             [
@@ -2682,8 +2682,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2010,
-        "y": 1220,
+        "x": 1910,
+        "y": 1200,
         "wires": []
     },
     {
