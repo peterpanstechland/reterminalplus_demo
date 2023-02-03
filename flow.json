@@ -2583,8 +2583,8 @@
         "type": "switch",
         "z": "57933f921577a835",
         "name": "if (cpu_temp >= 70)",
-        "property": "cpu_temp",
-        "propertyType": "flow",
+        "property": "payload",
+        "propertyType": "msg",
         "rules": [
             {
                 "t": "gte",
