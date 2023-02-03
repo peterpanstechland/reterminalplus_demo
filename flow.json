@@ -2605,28 +2605,6 @@
         ]
     },
     {
-        "id": "5a9708feab61dbe8",
-        "type": "toggle",
-        "z": "57933f921577a835",
-        "name": "toggle_fan",
-        "onOffTopic": "gpio/pin11",
-        "onValue": "1",
-        "onType": "str",
-        "offValue": "0",
-        "offType": "str",
-        "toggleTopic": "fan_stat",
-        "toggleValue": "0",
-        "toggleType": "str",
-        "passOnOff": "ifChanged",
-        "x": 1570,
-        "y": 1480,
-        "wires": [
-            [
-                "2a2bbe553520dd73"
-            ]
-        ]
-    },
-    {
         "id": "f88002cec79fefef",
         "type": "debug",
         "z": "57933f921577a835",
@@ -2764,8 +2742,33 @@
         "y": 1500,
         "wires": [
             [
-                "5a9708feab61dbe8"
+                "6c4daa6e030815ac"
             ]
+        ]
+    },
+    {
+        "id": "6c4daa6e030815ac",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "flow to payload ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "check_fan_stat",
+                "pt": "flow",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1580,
+        "y": 1400,
+        "wires": [
+            []
         ]
     }
 ]
