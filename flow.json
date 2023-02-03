@@ -2691,7 +2691,7 @@
         "icon": "",
         "payload": "123",
         "payloadType": "str",
-        "topic": "Fan_stat",
+        "topic": "fan_stat",
         "topicType": "str",
         "x": 1370,
         "y": 1200,
