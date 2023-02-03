@@ -2574,48 +2574,23 @@
         "wires": []
     },
     {
-        "id": "4ca53cd524f278c3",
-        "type": "random",
+        "id": "7a2d7845ad1f6770",
+        "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "low": "1",
-        "high": "0",
-        "inte": "true",
-        "property": "payload",
-        "x": 680,
+        "topic": "sensor/cputemp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 720,
         "y": 1420,
         "wires": [
             [
                 "d250ccf73da7decd"
-            ]
-        ]
-    },
-    {
-        "id": "1686b543416ade8f",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 500,
-        "y": 1420,
-        "wires": [
-            [
-                "4ca53cd524f278c3"
             ]
         ]
     }
