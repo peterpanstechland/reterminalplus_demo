@@ -668,11 +668,11 @@
         "z": "511c193196243d63",
         "name": "",
         "pin": "17",
-        "intype": "down",
+        "intype": "tri",
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 360,
+        "x": 350,
         "y": 880,
         "wires": [
             [
