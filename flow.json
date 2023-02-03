@@ -1593,9 +1593,7 @@
         "x": 400,
         "y": 1400,
         "wires": [
-            [
-                "057be5690fa3dbc0"
-            ]
+            []
         ]
     },
     {
@@ -2182,7 +2180,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "fan_current_stats",
+                "p": "cpu_temp",
                 "pt": "flow",
                 "to": "payload",
                 "tot": "msg"
@@ -2193,17 +2191,20 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
+        "x": 780,
         "y": 1480,
         "wires": [
-            []
+            [
+                "47d85c04d1f5f541",
+                "e7d44c444059fac3"
+            ]
         ]
     },
     {
         "id": "fd3ef5021a768c1a",
         "type": "change",
         "z": "57933f921577a835",
-        "name": "check to flow",
+        "name": "check_fan_stat to flow",
         "rules": [
             {
                 "t": "set",
@@ -2218,7 +2219,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 950,
+        "x": 980,
         "y": 1800,
         "wires": [
             []
@@ -2244,34 +2245,7 @@
         "x": 1240,
         "y": 1560,
         "wires": [
-            [
-                "82e794bc061409ee"
-            ]
-        ]
-    },
-    {
-        "id": "82e794bc061409ee",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 1)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1410,
-        "y": 1560,
-        "wires": [
-            [
-                "5e855be97e93ec52"
-            ]
+            []
         ]
     },
     {
@@ -2321,34 +2295,7 @@
         "x": 1240,
         "y": 1640,
         "wires": [
-            [
-                "8f8bebedc5bf7fcb"
-            ]
-        ]
-    },
-    {
-        "id": "8f8bebedc5bf7fcb",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 0)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1410,
-        "y": 1640,
-        "wires": [
-            [
-                "45b6ae7a610f8903"
-            ]
+            []
         ]
     },
     {
@@ -2433,8 +2380,8 @@
         "id": "e3f2e2c0b95c4dc3",
         "type": "switch",
         "z": "57933f921577a835",
-        "name": "if (check == 0)",
-        "property": "check",
+        "name": "if (check_fan_stat == 0)",
+        "property": "check_fan_stat",
         "propertyType": "flow",
         "rules": [
             {
@@ -2446,64 +2393,10 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 1240,
-        "y": 1480,
+        "x": 1590,
+        "y": 1360,
         "wires": [
-            [
-                "59ca48ed5c01067f"
-            ]
-        ]
-    },
-    {
-        "id": "59ca48ed5c01067f",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 1)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1410,
-        "y": 1480,
-        "wires": [
-            [
-                "811b6071b678100b"
-            ]
-        ]
-    },
-    {
-        "id": "811b6071b678100b",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "flow to payload ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "relay",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1580,
-        "y": 1480,
-        "wires": [
-            [
-                "2a2bbe553520dd73"
-            ]
+            []
         ]
     },
     {
@@ -2689,27 +2582,6 @@
         "wires": []
     },
     {
-        "id": "c7652775125872f9",
-        "type": "mqtt in",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "plc/fan_control",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "47a469b15c9c5f27",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 740,
-        "y": 1480,
-        "wires": [
-            [
-                "d250ccf73da7decd"
-            ]
-        ]
-    },
-    {
         "id": "d1326ad3a588b889",
         "type": "mqtt in",
         "z": "57933f921577a835",
@@ -2729,5 +2601,113 @@
                 "fd3ef5021a768c1a"
             ]
         ]
+    },
+    {
+        "id": "f8e42ccdfc815f13",
+        "type": "mqtt in",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "sensor/cputemp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 1480,
+        "wires": [
+            [
+                "d250ccf73da7decd"
+            ]
+        ]
+    },
+    {
+        "id": "47d85c04d1f5f541",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (cpu_temp >= 70)",
+        "property": "cpu_temp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 1480,
+        "wires": [
+            [
+                "c7945ce4e18c14d3"
+            ]
+        ]
+    },
+    {
+        "id": "e7d44c444059fac3",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (cpu_temp <= 65)",
+        "property": "cpu_temp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "65",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1030,
+        "y": 1560,
+        "wires": [
+            [
+                "ae70fe490e613feb"
+            ]
+        ]
+    },
+    {
+        "id": "5a9708feab61dbe8",
+        "type": "toggle",
+        "z": "57933f921577a835",
+        "name": "toggle_fan",
+        "onOffTopic": "gpio/pin11",
+        "onValue": "1",
+        "onType": "str",
+        "offValue": "0",
+        "offType": "str",
+        "toggleTopic": "fan_stat",
+        "toggleValue": "0",
+        "toggleType": "str",
+        "passOnOff": "ifChanged",
+        "x": 1570,
+        "y": 1480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7945ce4e18c14d3",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 1460,
+        "wires": []
     }
 ]
