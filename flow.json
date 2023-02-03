@@ -1892,43 +1892,6 @@
         "wires": []
     },
     {
-        "id": "5d0b75e49fe4bc90",
-        "type": "rpi-gpio in",
-        "z": "539608b79d63a004",
-        "name": "",
-        "pin": "22",
-        "intype": "tri",
-        "debounce": "25",
-        "read": false,
-        "bcm": true,
-        "x": 190,
-        "y": 140,
-        "wires": [
-            [
-                "68b1d8480f57accb",
-                "05fd330cd11ece55"
-            ]
-        ]
-    },
-    {
-        "id": "68b1d8480f57accb",
-        "type": "mqtt out",
-        "z": "539608b79d63a004",
-        "name": "",
-        "topic": "plc/fan_stat",
-        "qos": "2",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "47a469b15c9c5f27",
-        "x": 430,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "f8e42ccdfc815f13",
         "type": "mqtt in",
         "z": "539608b79d63a004",
@@ -2002,7 +1965,8 @@
         "wires": [
             [
                 "35a61157dd510d5b",
-                "214c2d79117c1a4b"
+                "214c2d79117c1a4b",
+                "730dca043f722ef6"
             ]
         ]
     },
@@ -2070,19 +2034,18 @@
         "wires": []
     },
     {
-        "id": "05fd330cd11ece55",
-        "type": "debug",
+        "id": "730dca043f722ef6",
+        "type": "rpi-gpio out",
         "z": "539608b79d63a004",
-        "name": "debug 5",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 400,
-        "y": 80,
+        "name": "",
+        "pin": "22",
+        "set": true,
+        "level": "0",
+        "freq": "",
+        "out": "out",
+        "bcm": true,
+        "x": 920,
+        "y": 380,
         "wires": []
     }
 ]
