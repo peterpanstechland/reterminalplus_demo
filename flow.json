@@ -686,7 +686,7 @@
         "z": "511c193196243d63",
         "name": "",
         "topic": "gpio/pin11",
-        "qos": "",
+        "qos": "2",
         "retain": "",
         "respTopic": "",
         "contentType": "",
