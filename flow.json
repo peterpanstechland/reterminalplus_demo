@@ -2350,27 +2350,6 @@
         "wires": []
     },
     {
-        "id": "06a8ea2b09034514",
-        "type": "mqtt in",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "gpio/pin11",
-        "qos": "2",
-        "datatype": "json",
-        "broker": "47a469b15c9c5f27",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 980,
-        "y": 1360,
-        "wires": [
-            [
-                "49e454af09273658"
-            ]
-        ]
-    },
-    {
         "id": "057be5690fa3dbc0",
         "type": "debug",
         "z": "57933f921577a835",
@@ -2540,7 +2519,7 @@
         "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "topic": "sensor/cputemp",
+        "topic": "plc/fan_control",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
@@ -2548,10 +2527,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 520,
-        "y": 1480,
+        "x": 1000,
+        "y": 1320,
         "wires": [
-            []
+            [
+                "49e454af09273658"
+            ]
         ]
     },
     {
@@ -2766,11 +2747,30 @@
         "to": "",
         "reg": false,
         "x": 1580,
-        "y": 1400,
+        "y": 1480,
         "wires": [
             [
-                "2a2bbe553520dd73"
+                "2a2bbe553520dd73",
+                "695eebfd8e14292e"
             ]
         ]
+    },
+    {
+        "id": "695eebfd8e14292e",
+        "type": "mqtt out",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "plc/fan_control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 1800,
+        "y": 1420,
+        "wires": []
     }
 ]
