@@ -2382,5 +2382,342 @@
         "x": 1250,
         "y": 1800,
         "wires": []
+    },
+    {
+        "id": "d250ccf73da7decd",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "payload to flow",
+        "rules": [
+            {
+                "t": "set",
+                "p": "cpu_temp",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 700,
+        "y": 1460,
+        "wires": [
+            [
+                "47d85c04d1f5f541",
+                "e7d44c444059fac3"
+            ]
+        ]
+    },
+    {
+        "id": "5e855be97e93ec52",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "flow to payload ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "relay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 1540,
+        "wires": [
+            [
+                "1567f6f3f6f6a1fe"
+            ]
+        ]
+    },
+    {
+        "id": "45b6ae7a610f8903",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "flow to payload ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "relay",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 1620,
+        "wires": [
+            [
+                "1fd1aea8d454ebfb"
+            ]
+        ]
+    },
+    {
+        "id": "2a2bbe553520dd73",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1870,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "1567f6f3f6f6a1fe",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "1fd1aea8d454ebfb",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "47d85c04d1f5f541",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (cpu_temp >= 70)",
+        "property": "cpu_temp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "gte",
+                "v": "70",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 1460,
+        "wires": [
+            [
+                "d23582ca1a62a659"
+            ]
+        ]
+    },
+    {
+        "id": "e7d44c444059fac3",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (cpu_temp <= 65)",
+        "property": "cpu_temp",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "lte",
+                "v": "65",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 910,
+        "y": 1540,
+        "wires": [
+            [
+                "7a165e8d3fa0377a"
+            ]
+        ]
+    },
+    {
+        "id": "7bae2d86c932b0f6",
+        "type": "random",
+        "z": "57933f921577a835",
+        "name": "",
+        "low": "71",
+        "high": "80",
+        "inte": "true",
+        "property": "payload",
+        "x": 660,
+        "y": 1540,
+        "wires": [
+            [
+                "d250ccf73da7decd"
+            ]
+        ]
+    },
+    {
+        "id": "211ae69cdc20b4c0",
+        "type": "inject",
+        "z": "57933f921577a835",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "temp",
+        "x": 450,
+        "y": 1540,
+        "wires": [
+            [
+                "7bae2d86c932b0f6"
+            ]
+        ]
+    },
+    {
+        "id": "7a165e8d3fa0377a",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (check_fan_stat == 1)",
+        "property": "check_fan_stat",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 1540,
+        "wires": [
+            [
+                "7f991a01192ac2ce"
+            ]
+        ]
+    },
+    {
+        "id": "7f991a01192ac2ce",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "d23582ca1a62a659",
+        "type": "switch",
+        "z": "57933f921577a835",
+        "name": "if (check_fan_stat == 0)",
+        "property": "check_fan_stat",
+        "propertyType": "flow",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 1170,
+        "y": 1480,
+        "wires": [
+            [
+                "6c4daa6e030815ac"
+            ]
+        ]
+    },
+    {
+        "id": "6c4daa6e030815ac",
+        "type": "change",
+        "z": "57933f921577a835",
+        "name": "flow to payload ",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 1460,
+        "wires": [
+            [
+                "2a2bbe553520dd73",
+                "695eebfd8e14292e"
+            ]
+        ]
+    },
+    {
+        "id": "695eebfd8e14292e",
+        "type": "mqtt out",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "plc/fan_control",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 1680,
+        "y": 1400,
+        "wires": []
     }
 ]
