@@ -2196,74 +2196,6 @@
         "wires": []
     },
     {
-        "id": "bc9cf0a98e6d434c",
-        "type": "toggle",
-        "z": "57933f921577a835",
-        "name": "toggle_fan",
-        "onOffTopic": "gpio/pin11",
-        "onValue": "1",
-        "onType": "str",
-        "offValue": "0",
-        "offType": "str",
-        "toggleTopic": "fan_stat",
-        "toggleValue": "123",
-        "toggleType": "str",
-        "passOnOff": "ifChanged",
-        "x": 1630,
-        "y": 1200,
-        "wires": [
-            [
-                "3d5315dd49f6e44c",
-                "f1885fc79fae6331"
-            ]
-        ]
-    },
-    {
-        "id": "3d5315dd49f6e44c",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "a8eef3439640c356",
-        "type": "ui_button",
-        "z": "57933f921577a835",
-        "name": "",
-        "group": "c5f1b8aa.45bc08",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Fan ON/OFF",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "123",
-        "payloadType": "str",
-        "topic": "fan_control",
-        "topicType": "str",
-        "x": 1370,
-        "y": 1200,
-        "wires": [
-            [
-                "bc9cf0a98e6d434c"
-            ]
-        ]
-    },
-    {
         "id": "5d0b75e49fe4bc90",
         "type": "rpi-gpio in",
         "z": "57933f921577a835",
@@ -2671,7 +2603,8 @@
         "y": 2020,
         "wires": [
             [
-                "35a61157dd510d5b"
+                "35a61157dd510d5b",
+                "214c2d79117c1a4b"
             ]
         ]
     },
@@ -2719,5 +2652,23 @@
                 "bf4080c07e339105"
             ]
         ]
+    },
+    {
+        "id": "214c2d79117c1a4b",
+        "type": "mqtt out",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "plc/fan_stat",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "47a469b15c9c5f27",
+        "x": 1670,
+        "y": 2100,
+        "wires": []
     }
 ]
