@@ -1911,8 +1911,8 @@
         "payloadType": "str",
         "topic": "fan_control",
         "topicType": "str",
-        "x": 870,
-        "y": 480,
+        "x": 890,
+        "y": 460,
         "wires": [
             [
                 "89659dcdb5f07540"
