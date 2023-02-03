@@ -2725,10 +2725,10 @@
         "bgcolor": "",
         "className": "",
         "icon": "",
-        "payload": "",
+        "payload": "1",
         "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "gpio11",
+        "topicType": "str",
         "x": 1350,
         "y": 1200,
         "wires": [
