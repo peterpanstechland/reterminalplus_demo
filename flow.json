@@ -2719,7 +2719,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Fan ON",
+        "label": "Fan ON/OFF",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2729,7 +2729,7 @@
         "payloadType": "str",
         "topic": "gpio11",
         "topicType": "str",
-        "x": 1360,
+        "x": 1370,
         "y": 1200,
         "wires": [
             [
