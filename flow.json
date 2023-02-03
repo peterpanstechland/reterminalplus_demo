@@ -1560,24 +1560,6 @@
         ]
     },
     {
-        "id": "f1885fc79fae6331",
-        "type": "mqtt out",
-        "z": "57933f921577a835",
-        "name": "",
-        "topic": "plc/fan_control",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "47a469b15c9c5f27",
-        "x": 1880,
-        "y": 1280,
-        "wires": []
-    },
-    {
         "id": "0669e8b9926c71f8",
         "type": "mqtt in",
         "z": "57933f921577a835",
@@ -1718,442 +1700,6 @@
         ]
     },
     {
-        "id": "973d433ca296448b",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "check -> \"0\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 800,
-        "y": 1140,
-        "wires": [
-            [
-                "4fda245f89d15c4b"
-            ]
-        ]
-    },
-    {
-        "id": "54cd0eea641a8a3e",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "check -> \"1\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 800,
-        "y": 1180,
-        "wires": [
-            [
-                "4fda245f89d15c4b"
-            ]
-        ]
-    },
-    {
-        "id": "5d368d1216d31c6e",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "payload to flow",
-        "rules": [
-            {
-                "t": "set",
-                "p": "relay",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 990,
-        "y": 780,
-        "wires": [
-            [
-                "142d4614.f818aa",
-                "c0b966c.6cdca98",
-                "305cfdf2.9e8af2"
-            ]
-        ]
-    },
-    {
-        "id": "4fda245f89d15c4b",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "check to flow",
-        "rules": [
-            {
-                "t": "set",
-                "p": "check",
-                "pt": "flow",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 980,
-        "y": 1160,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c0b966c.6cdca98",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (check == 1)",
-        "property": "check",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1270,
-        "y": 920,
-        "wires": [
-            [
-                "a04dcc7.c72123"
-            ]
-        ]
-    },
-    {
-        "id": "a04dcc7.c72123",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 1)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1440,
-        "y": 920,
-        "wires": [
-            [
-                "9e1e9f30.858e9"
-            ]
-        ]
-    },
-    {
-        "id": "9e1e9f30.858e9",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "flow to payload ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "relay",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1610,
-        "y": 920,
-        "wires": [
-            [
-                "cb4c28be.e0f698"
-            ]
-        ]
-    },
-    {
-        "id": "305cfdf2.9e8af2",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (check == 1)",
-        "property": "check",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1270,
-        "y": 1000,
-        "wires": [
-            [
-                "5c95c53f.3773ec"
-            ]
-        ]
-    },
-    {
-        "id": "5c95c53f.3773ec",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 0)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1440,
-        "y": 1000,
-        "wires": [
-            [
-                "6e17ee06.4fa98"
-            ]
-        ]
-    },
-    {
-        "id": "6e17ee06.4fa98",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "flow to payload ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "relay",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1610,
-        "y": 1000,
-        "wires": [
-            [
-                "e48e73ac.33f52"
-            ]
-        ]
-    },
-    {
-        "id": "618c6bda.b481b4",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "cb4c28be.e0f698",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "e48e73ac.33f52",
-        "type": "debug",
-        "z": "57933f921577a835",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1860,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "142d4614.f818aa",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (check == 0)",
-        "property": "check",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1270,
-        "y": 840,
-        "wires": [
-            [
-                "d451c0c0.03235"
-            ]
-        ]
-    },
-    {
-        "id": "d451c0c0.03235",
-        "type": "switch",
-        "z": "57933f921577a835",
-        "name": "if (relay == 1)",
-        "property": "relay",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "1",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1440,
-        "y": 840,
-        "wires": [
-            [
-                "b7a1eef0.026ea"
-            ]
-        ]
-    },
-    {
-        "id": "b7a1eef0.026ea",
-        "type": "change",
-        "z": "57933f921577a835",
-        "name": "flow to payload ",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "relay",
-                "tot": "flow"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1610,
-        "y": 840,
-        "wires": [
-            [
-                "618c6bda.b481b4"
-            ]
-        ]
-    },
-    {
-        "id": "7a8f51bb04a6d7c0",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "relay -> \"1\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1",
-        "payloadType": "str",
-        "x": 820,
-        "y": 800,
-        "wires": [
-            [
-                "5d368d1216d31c6e"
-            ]
-        ]
-    },
-    {
-        "id": "8bf2702708aca886",
-        "type": "inject",
-        "z": "57933f921577a835",
-        "name": "relay -> \"0\"",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "0",
-        "payloadType": "str",
-        "x": 820,
-        "y": 760,
-        "wires": [
-            [
-                "5d368d1216d31c6e"
-            ]
-        ]
-    },
-    {
         "id": "fd3ef5021a768c1a",
         "type": "change",
         "z": "57933f921577a835",
@@ -2172,8 +1718,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 980,
-        "y": 1800,
+        "x": 700,
+        "y": 1600,
         "wires": [
             []
         ]
@@ -2188,8 +1734,8 @@
         "debounce": "25",
         "read": false,
         "bcm": true,
-        "x": 2190,
-        "y": 1280,
+        "x": 950,
+        "y": 1940,
         "wires": [
             [
                 "68b1d8480f57accb"
@@ -2210,8 +1756,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 2430,
-        "y": 1280,
+        "x": 1190,
+        "y": 1940,
         "wires": []
     },
     {
@@ -2227,8 +1773,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 740,
-        "y": 1800,
+        "x": 460,
+        "y": 1600,
         "wires": [
             [
                 "fd3ef5021a768c1a"
@@ -2591,8 +2137,8 @@
         "payloadType": "str",
         "topic": "fan_control",
         "topicType": "str",
-        "x": 1250,
-        "y": 2120,
+        "x": 1230,
+        "y": 2080,
         "wires": [
             [
                 "bf4080c07e339105"
@@ -2613,8 +2159,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 1670,
-        "y": 2100,
+        "x": 1690,
+        "y": 2080,
         "wires": []
     }
 ]
