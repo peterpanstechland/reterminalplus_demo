@@ -2737,5 +2737,43 @@
         "x": 2430,
         "y": 1280,
         "wires": []
+    },
+    {
+        "id": "c7652775125872f9",
+        "type": "mqtt in",
+        "z": "57933f921577a835",
+        "name": "",
+        "topic": "plc/fan_control",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1480,
+        "y": 1360,
+        "wires": [
+            [
+                "5295c4bcc95c301a"
+            ]
+        ]
+    },
+    {
+        "id": "5295c4bcc95c301a",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1710,
+        "y": 1360,
+        "wires": []
     }
 ]
