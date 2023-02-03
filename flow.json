@@ -1626,10 +1626,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
-        "y": 140,
+        "x": 400,
+        "y": 1400,
         "wires": [
-            []
+            [
+                "057be5690fa3dbc0"
+            ]
         ]
     },
     {
@@ -2627,5 +2629,22 @@
                 "49e454af09273658"
             ]
         ]
+    },
+    {
+        "id": "057be5690fa3dbc0",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 1400,
+        "wires": []
     }
 ]
