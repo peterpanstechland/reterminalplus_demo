@@ -2613,7 +2613,7 @@
         "z": "57933f921577a835",
         "name": "",
         "topic": "gpio/pin11",
-        "qos": "1",
+        "qos": "2",
         "datatype": "json",
         "broker": "47a469b15c9c5f27",
         "nl": false,
