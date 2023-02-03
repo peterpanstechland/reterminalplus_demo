@@ -2670,7 +2670,26 @@
         "x": 1470,
         "y": 2020,
         "wires": [
-            []
+            [
+                "35a61157dd510d5b"
+            ]
         ]
+    },
+    {
+        "id": "35a61157dd510d5b",
+        "type": "debug",
+        "z": "57933f921577a835",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1690,
+        "y": 2020,
+        "wires": []
     }
 ]
