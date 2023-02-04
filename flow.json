@@ -1566,7 +1566,7 @@
         "type": "mqtt in",
         "z": "57933f921577a835",
         "name": "",
-        "topic": "plc/fan_stat",
+        "topic": "plc/fan_stat_pub",
         "qos": "0",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
@@ -1574,7 +1574,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 210,
+        "x": 220,
         "y": 300,
         "wires": [
             [
@@ -2061,7 +2061,7 @@
         "type": "mqtt out",
         "z": "539608b79d63a004",
         "name": "",
-        "topic": "plc/fan_stat",
+        "topic": "plc/fan_stat_ctrl",
         "qos": "0",
         "retain": "",
         "respTopic": "",
@@ -2070,7 +2070,7 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 930,
+        "x": 940,
         "y": 280,
         "wires": []
     },
