@@ -2094,7 +2094,7 @@
         "type": "mqtt in",
         "z": "539608b79d63a004",
         "name": "",
-        "topic": "plc/fan_stat_ctrl",
+        "topic": "plc/fan_stat_pub",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
