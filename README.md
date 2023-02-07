@@ -13,8 +13,8 @@ Install node red on raspberry pi: https://nodered.org/docs/getting-started/raspb
 Install node red dashboard: https://flows.nodered.org/node/node-red-dashboard
 
 ## Install mosquitto Mqtt Broker or Node Red Mqtt Broker(Choose One)
-Install mosquitto https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/</br>
-Install node red mqtt broker: https://flows.nodered.org/node/node-red-contrib-mqtt-broker
+Option 1: Install mosquitto https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/</br>
+Option 2: Install node red mqtt broker: https://flows.nodered.org/node/node-red-contrib-mqtt-broker
 
 ## Setup Kiosk mode
 kiosk mode: https://desertbot.io/blog/raspberry-pi-touchscreen-kiosk-setup
