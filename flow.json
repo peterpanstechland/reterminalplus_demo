@@ -239,7 +239,7 @@
         "type": "mqtt-broker",
         "name": "",
         "broker": "localhost",
-        "port": "1884",
+        "port": "1883",
         "clientid": "",
         "autoConnect": true,
         "usetls": false,
@@ -258,6 +258,7 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
+        "userProps": "",
         "sessionExpiry": ""
     },
     {
