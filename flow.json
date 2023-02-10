@@ -2427,10 +2427,10 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload}}}\"/>",
+        "template": "<img width=\"320px\" height=\"240px\" src={{{payload}}}/>",
         "output": "str",
-        "x": 840,
-        "y": 860,
+        "x": 860,
+        "y": 840,
         "wires": [
             [
                 "60c3326ab186e800"
