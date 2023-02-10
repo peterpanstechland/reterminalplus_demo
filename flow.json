@@ -254,7 +254,7 @@
         "id": "47a469b15c9c5f27",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "reterminalplus.local",
+        "broker": "192.168.1.65",
         "port": "1883",
         "clientid": "",
         "autoConnect": true,
