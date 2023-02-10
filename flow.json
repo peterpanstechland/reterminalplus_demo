@@ -2408,7 +2408,7 @@
         "order": 7,
         "width": "0",
         "height": "0",
-        "format": "",
+        "format": "<div>\n    <p>Taken from wikpedia</p>\n    <img src=\"data:image/png;base64, {payload.image.base64}}\" alt=\"Red dot\" />\n</div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
         "resendOnRefresh": true,
