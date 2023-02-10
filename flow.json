@@ -2419,7 +2419,6 @@
         "y": 720,
         "wires": [
             [
-                "dacaa6dc6cd9b8f3",
                 "38aeabce26752132"
             ]
         ]
@@ -2429,7 +2428,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 8",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2456,7 +2455,8 @@
         "y": 800,
         "wires": [
             [
-                "1ab473af56702995"
+                "1ab473af56702995",
+                "dacaa6dc6cd9b8f3"
             ]
         ]
     }
