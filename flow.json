@@ -2429,7 +2429,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{msg.payload}}}\">",
+        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload}}}\">",
         "output": "str",
         "x": 840,
         "y": 700,
