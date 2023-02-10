@@ -2434,7 +2434,25 @@
         "y": 800,
         "wires": [
             [
-                "1ab473af56702995",
+                "1ab473af56702995"
+            ]
+        ]
+    },
+    {
+        "id": "af4cf19866e41806",
+        "type": "template",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "This is the payload: {{payload}} !",
+        "output": "str",
+        "x": 860,
+        "y": 680,
+        "wires": [
+            [
                 "dacaa6dc6cd9b8f3"
             ]
         ]
