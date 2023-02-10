@@ -2395,10 +2395,12 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1080,
-        "y": 620,
+        "x": 1140,
+        "y": 680,
         "wires": [
-            []
+            [
+                "dacaa6dc6cd9b8f3"
+            ]
         ]
     },
     {
@@ -2452,9 +2454,7 @@
         "x": 840,
         "y": 860,
         "wires": [
-            [
-                "dacaa6dc6cd9b8f3"
-            ]
+            []
         ]
     },
     {
