@@ -2149,8 +2149,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 220,
-        "y": 380,
+        "x": 180,
+        "y": 140,
         "wires": [
             [
                 "816f41426a236bdc"
@@ -2171,8 +2171,8 @@
         "correl": "",
         "expiry": "",
         "broker": "47a469b15c9c5f27",
-        "x": 1140,
-        "y": 660,
+        "x": 1180,
+        "y": 340,
         "wires": []
     },
     {
@@ -2195,8 +2195,8 @@
         "payloadType": "bool",
         "topic": "fan_control",
         "topicType": "str",
-        "x": 130,
-        "y": 660,
+        "x": 170,
+        "y": 340,
         "wires": [
             [
                 "5f4731376f94bb88"
@@ -2222,8 +2222,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 380,
+        "x": 420,
+        "y": 140,
         "wires": [
             []
         ]
@@ -2245,8 +2245,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
-        "y": 700,
+        "x": 710,
+        "y": 380,
         "wires": [
             [
                 "361f10c41812dac6"
@@ -2270,8 +2270,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 670,
-        "y": 640,
+        "x": 710,
+        "y": 320,
         "wires": [
             [
                 "369b819d0e99dab4"
@@ -2297,8 +2297,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 640,
+        "x": 980,
+        "y": 320,
         "wires": [
             [
                 "f3095140cc399c7c"
@@ -2324,8 +2324,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 940,
-        "y": 700,
+        "x": 980,
+        "y": 380,
         "wires": [
             [
                 "f3095140cc399c7c"
@@ -2349,13 +2349,33 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 360,
-        "y": 640,
+        "x": 400,
+        "y": 320,
         "wires": [
             [
                 "7e30a9b7d0585541",
                 "49de0ba68b912f0b"
             ]
         ]
+    },
+    {
+        "id": "bfa8ce611a34d12c",
+        "type": "comment",
+        "z": "04d6ca3767c80bee",
+        "name": "Getting FAN State from MQTT",
+        "info": "Getting FAN State from MQTT",
+        "x": 200,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "453fec2e7a8a2a42",
+        "type": "comment",
+        "z": "04d6ca3767c80bee",
+        "name": "Toggle FAN State with Button",
+        "info": "Toggle FAN State with Button and sent to MQTT topic: plc/fan_stat_ctrl",
+        "x": 200,
+        "y": 260,
+        "wires": []
     }
 ]
