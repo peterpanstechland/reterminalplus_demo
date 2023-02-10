@@ -308,6 +308,22 @@
         "hidden": false
     },
     {
+        "id": "c7a43587.2944e8",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "fbd536a.22bf9c8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "fbd536a.22bf9c8",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard"
+    },
+    {
         "id": "71f56412e0a1bd0b",
         "type": "debug",
         "z": "2968a4fcf75e9496",
@@ -2343,7 +2359,8 @@
         "y": 500,
         "wires": [
             [
-                "48a1c0f70518756a"
+                "48a1c0f70518756a",
+                "1ab473af56702995"
             ]
         ]
     },
@@ -2362,5 +2379,45 @@
         "x": 940,
         "y": 500,
         "wires": []
+    },
+    {
+        "id": "36238576.a6929a",
+        "type": "template",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "field": "template",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload.image.base64}}}\">",
+        "output": "str",
+        "x": 820,
+        "y": 620,
+        "wires": [
+            [
+                "1ab473af56702995"
+            ]
+        ]
+    },
+    {
+        "id": "1ab473af56702995",
+        "type": "ui_template",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "name": "",
+        "order": 7,
+        "width": "0",
+        "height": "0",
+        "format": "",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1000,
+        "y": 620,
+        "wires": [
+            []
+        ]
     }
 ]
