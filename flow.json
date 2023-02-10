@@ -1155,11 +1155,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "text",
+        "label": "Number of Person",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 910,
+        "x": 950,
         "y": 140,
         "wires": []
     },
