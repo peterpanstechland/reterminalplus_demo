@@ -2359,7 +2359,7 @@
         "y": 500,
         "wires": [
             [
-                "36238576.a6929a"
+                "1ab473af56702995"
             ]
         ]
     },
@@ -2379,25 +2379,6 @@
         "x": 1200,
         "y": 520,
         "wires": []
-    },
-    {
-        "id": "36238576.a6929a",
-        "type": "template",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "field": "template",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload.image.base64}}}\">",
-        "output": "str",
-        "x": 820,
-        "y": 620,
-        "wires": [
-            [
-                "1ab473af56702995"
-            ]
-        ]
     },
     {
         "id": "1ab473af56702995",
