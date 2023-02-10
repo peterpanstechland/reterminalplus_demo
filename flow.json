@@ -2406,7 +2406,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 8",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2434,7 +2434,7 @@
         "wires": [
             [
                 "60c3326ab186e800",
-                "1ab473af56702995"
+                "af04f6659a120eb5"
             ]
         ]
     },
@@ -2499,5 +2499,24 @@
         "x": 1020,
         "y": 880,
         "wires": []
+    },
+    {
+        "id": "af04f6659a120eb5",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 2",
+        "func": "msg.current = Number(msg.payload)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 740,
+        "wires": [
+            [
+                "1ab473af56702995"
+            ]
+        ]
     }
 ]
