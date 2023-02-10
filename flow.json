@@ -24,6 +24,14 @@
         "env": []
     },
     {
+        "id": "6b0c0aada256f58a",
+        "type": "tab",
+        "label": "Jetson",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "9f3346aa.d4fc48",
         "type": "tab",
         "label": "System",
@@ -800,6 +808,7 @@
         "append": "",
         "useSpawn": "",
         "timer": "",
+        "winHide": false,
         "name": "Disk Usage",
         "x": 330,
         "y": 320,
@@ -1113,6 +1122,44 @@
         "info": "Toggle FAN State with Button and sent to MQTT topic: plc/fan_stat_ctrl",
         "x": 200,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e3ad7fd9bfeaf4af",
+        "type": "mqtt in",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "topic": "jetson/num_person",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "5b55417ebc5b77b6"
+            ]
+        ]
+    },
+    {
+        "id": "5b55417ebc5b77b6",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "72fc319.cc425d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 910,
+        "y": 140,
         "wires": []
     },
     {
