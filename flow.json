@@ -2368,7 +2368,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 7",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2408,7 +2408,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2487,7 +2487,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "msg.payload = \"data:image/png;base64\" + msg.payload;\nreturn msg;",
+        "func": "msg.payload = \"data:image/png;base64,\" + msg.payload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2497,7 +2497,8 @@
         "y": 700,
         "wires": [
             [
-                "38aeabce26752132"
+                "38aeabce26752132",
+                "48a1c0f70518756a"
             ]
         ]
     }
