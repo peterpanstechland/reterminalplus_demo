@@ -2305,7 +2305,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 6",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2324,6 +2324,43 @@
         "info": "Couting people with coco-net model on jetson",
         "x": 700,
         "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6276dc539a31010c",
+        "type": "mqtt in",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "topic": "jetson/num_person_image",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "47a469b15c9c5f27",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 730,
+        "y": 500,
+        "wires": [
+            [
+                "48a1c0f70518756a"
+            ]
+        ]
+    },
+    {
+        "id": "48a1c0f70518756a",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 500,
         "wires": []
     }
 ]
