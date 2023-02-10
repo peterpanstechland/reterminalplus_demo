@@ -1137,8 +1137,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 670,
-        "y": 120,
+        "x": 690,
+        "y": 140,
         "wires": [
             [
                 "5b55417ebc5b77b6",
@@ -1177,6 +1177,16 @@
         "statusType": "auto",
         "x": 920,
         "y": 260,
+        "wires": []
+    },
+    {
+        "id": "382efdde102aab89",
+        "type": "comment",
+        "z": "6b0c0aada256f58a",
+        "name": "Jetson People Counting",
+        "info": "Couting people with coco-net model on jetson",
+        "x": 700,
+        "y": 80,
         "wires": []
     },
     {
