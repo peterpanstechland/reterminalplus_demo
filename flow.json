@@ -2445,7 +2445,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "payload",
+        "template": "{{payload}}",
         "output": "str",
         "x": 840,
         "y": 860,
