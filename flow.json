@@ -2199,7 +2199,7 @@
         "y": 660,
         "wires": [
             [
-                "7b51faf471b35d66"
+                "5f4731376f94bb88"
             ]
         ]
     },
@@ -2351,12 +2351,12 @@
         "wires": []
     },
     {
-        "id": "14689a492ff5875b",
+        "id": "5f4731376f94bb88",
         "type": "switch",
         "z": "04d6ca3767c80bee",
-        "name": "if (check_fan_stat == 1)",
-        "property": "check_fan_stat",
-        "propertyType": "flow",
+        "name": "If button trigger",
+        "property": "payload",
+        "propertyType": "msg",
         "rules": [
             {
                 "t": "eq",
@@ -2367,33 +2367,12 @@
         "checkall": "true",
         "repair": false,
         "outputs": 1,
-        "x": 390,
-        "y": 700,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "5f4731376f94bb88",
-        "type": "switch",
-        "z": "04d6ca3767c80bee",
-        "name": "if (check_fan_stat == 0)",
-        "property": "check_fan_stat",
-        "propertyType": "flow",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "0",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 390,
+        "x": 360,
         "y": 640,
         "wires": [
-            []
+            [
+                "7b51faf471b35d66"
+            ]
         ]
     },
     {
