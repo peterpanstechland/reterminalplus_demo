@@ -19,14 +19,14 @@
         "id": "9f3346aa.d4fc48",
         "type": "tab",
         "label": "System",
-        "disabled": false,
+        "disabled": true,
         "info": ""
     },
     {
         "id": "57933f921577a835",
         "type": "tab",
         "label": "Fan_Control",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
@@ -34,7 +34,7 @@
         "id": "539608b79d63a004",
         "type": "tab",
         "label": "PLC_FAN_GPIO",
-        "disabled": false,
+        "disabled": true,
         "info": "",
         "env": []
     },
