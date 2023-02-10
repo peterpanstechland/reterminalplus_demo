@@ -2429,7 +2429,7 @@
         "fieldType": "msg",
         "format": "handlebars",
         "syntax": "mustache",
-        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload}}}\">",
+        "template": "<img width=\"320px\" height=\"240px\" href=\"{{{payload}}}\">",
         "output": "str",
         "x": 840,
         "y": 700,
@@ -2497,8 +2497,7 @@
         "y": 700,
         "wires": [
             [
-                "38aeabce26752132",
-                "48a1c0f70518756a"
+                "38aeabce26752132"
             ]
         ]
     }
