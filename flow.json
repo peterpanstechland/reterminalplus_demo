@@ -2185,7 +2185,7 @@
         "width": 0,
         "height": 0,
         "passthru": false,
-        "label": "Fan ON/OFF",
+        "label": "Fan Control",
         "tooltip": "",
         "color": "",
         "bgcolor": "",
@@ -2223,8 +2223,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 620,
-        "y": 520,
+        "x": 800,
+        "y": 400,
         "wires": [
             []
         ]
