@@ -2406,7 +2406,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 8",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2478,7 +2478,7 @@
         "wires": [
             [
                 "48a1c0f70518756a",
-                "1ab473af56702995"
+                "af4cf19866e41806"
             ]
         ]
     },
@@ -2487,7 +2487,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 9",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
