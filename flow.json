@@ -2359,8 +2359,7 @@
         "y": 500,
         "wires": [
             [
-                "1ab473af56702995",
-                "aa833a956e8c3ce7"
+                "38aeabce26752132"
             ]
         ]
     },
@@ -2401,25 +2400,6 @@
         "wires": [
             [
                 "48a1c0f70518756a"
-            ]
-        ]
-    },
-    {
-        "id": "aa833a956e8c3ce7",
-        "type": "function",
-        "z": "6b0c0aada256f58a",
-        "name": "function 1",
-        "func": "var image = { payload: msg.payload};\n\nreturn image;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 720,
-        "wires": [
-            [
-                "38aeabce26752132"
             ]
         ]
     },
