@@ -2409,7 +2409,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var image = payload.image.base64;\n\nreturn image;",
+        "func": "var image = { payload: payload.image.base64};\n\nreturn image;",
         "outputs": 1,
         "noerr": 1,
         "initialize": "",
@@ -2419,7 +2419,8 @@
         "y": 720,
         "wires": [
             [
-                "dacaa6dc6cd9b8f3"
+                "dacaa6dc6cd9b8f3",
+                "38aeabce26752132"
             ]
         ]
     },
@@ -2439,5 +2440,22 @@
         "x": 1020,
         "y": 720,
         "wires": []
+    },
+    {
+        "id": "38aeabce26752132",
+        "type": "template",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"320px\" height=\"240px\" src=\"{{{payload.image.base64}}}\">",
+        "output": "str",
+        "x": 840,
+        "y": 800,
+        "wires": [
+            []
+        ]
     }
 ]
