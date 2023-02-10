@@ -2449,11 +2449,40 @@
         "syntax": "mustache",
         "template": "This is the payload: {{payload}} !",
         "output": "str",
-        "x": 860,
-        "y": 680,
+        "x": 840,
+        "y": 860,
         "wires": [
             [
                 "dacaa6dc6cd9b8f3"
+            ]
+        ]
+    },
+    {
+        "id": "67c57c19dfa7ca90",
+        "type": "inject",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 620,
+        "y": 860,
+        "wires": [
+            [
+                "af4cf19866e41806"
             ]
         ]
     }
