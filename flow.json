@@ -2395,12 +2395,48 @@
         "resendOnRefresh": true,
         "templateScope": "local",
         "className": "",
-        "x": 1000,
+        "x": 1080,
         "y": 620,
         "wires": [
             [
                 "48a1c0f70518756a"
             ]
         ]
+    },
+    {
+        "id": "aa833a956e8c3ce7",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 1",
+        "func": "var image = payload.image.base64;\n\nreturn image;",
+        "outputs": 1,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 720,
+        "wires": [
+            [
+                "dacaa6dc6cd9b8f3"
+            ]
+        ]
+    },
+    {
+        "id": "dacaa6dc6cd9b8f3",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 720,
+        "wires": []
     }
 ]
