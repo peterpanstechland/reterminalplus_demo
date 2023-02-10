@@ -1130,7 +1130,7 @@
         "z": "6b0c0aada256f58a",
         "name": "",
         "topic": "jetson/num_person",
-        "qos": "2",
+        "qos": "0",
         "datatype": "auto-detect",
         "broker": "47a469b15c9c5f27",
         "nl": false,
