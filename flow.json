@@ -314,7 +314,7 @@
         "tab": "fbd536a.22bf9c8",
         "order": 1,
         "disp": true,
-        "width": "10",
+        "width": 13,
         "collapse": false,
         "className": ""
     },
@@ -322,7 +322,9 @@
         "id": "fbd536a.22bf9c8",
         "type": "ui_tab",
         "name": "Home",
-        "icon": "dashboard"
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "2e693d5153a74d1a",
@@ -2418,9 +2420,9 @@
         "z": "6b0c0aada256f58a",
         "group": "c7a43587.2944e8",
         "name": "",
-        "order": 9,
-        "width": "10",
-        "height": "10",
+        "order": 1,
+        "width": 13,
+        "height": 11,
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
