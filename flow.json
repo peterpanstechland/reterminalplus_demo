@@ -2541,6 +2541,33 @@
         "wires": [
             [
                 "1ab473af56702995",
+                "d5f9313d5dc36656"
+            ]
+        ]
+    },
+    {
+        "id": "d5f9313d5dc36656",
+        "type": "change",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 640,
+        "wires": [
+            [
                 "dacaa6dc6cd9b8f3"
             ]
         ]
