@@ -2493,7 +2493,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "msg.payload = \"data:image/png;base64,\" + msg.payload;\nreturn msg;",
+        "func": "msg.payload = \"data:image/png;base64,\" + msg.payload;\nmsg.payload = Number(msg.payload);\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
