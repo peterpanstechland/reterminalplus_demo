@@ -2668,5 +2668,34 @@
         "x": 1220,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "1c9124e9.e36edb",
+        "type": "inject",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1889,
+        "y": 1074,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48a892ea.b7576c",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 2285,
+        "y": 1171,
+        "wires": []
     }
 ]
