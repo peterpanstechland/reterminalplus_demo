@@ -2503,8 +2503,7 @@
         "y": 960,
         "wires": [
             [
-                "48a1c0f70518756a",
-                "af4cf19866e41806"
+                "82f23d7023ce8235"
             ]
         ]
     },
@@ -2629,9 +2628,7 @@
         "x": 880,
         "y": 380,
         "wires": [
-            [
-                "82f23d7023ce8235"
-            ],
+            [],
             [],
             []
         ]
@@ -2682,7 +2679,9 @@
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
+        "resendOnRefresh": false,
         "templateScope": "local",
+        "className": "",
         "x": 1300,
         "y": 380,
         "wires": [
