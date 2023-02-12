@@ -2467,25 +2467,6 @@
         "y": 860,
         "wires": [
             [
-                "40a3783d6dc3f27b"
-            ]
-        ]
-    },
-    {
-        "id": "40a3783d6dc3f27b",
-        "type": "function",
-        "z": "6b0c0aada256f58a",
-        "name": "function 1",
-        "func": "msg.payload = \"data:image/png;base64,\" + msg.payload;\nmsg.payload = Number(msg.payload);\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 740,
-        "y": 960,
-        "wires": [
-            [
                 "82f23d7023ce8235"
             ]
         ]
@@ -2675,7 +2656,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 8",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
