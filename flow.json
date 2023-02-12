@@ -2555,7 +2555,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{payload}",
+                "to": "{{payload}}",
                 "tot": "num"
             }
         ],
