@@ -2556,7 +2556,7 @@
                 "p": "payload",
                 "pt": "msg",
                 "to": "{{payload}}",
-                "tot": "num"
+                "tot": "jsonata"
             }
         ],
         "action": "",
