@@ -2393,7 +2393,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 7",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -2555,8 +2555,8 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "",
-                "tot": "num"
+                "to": "$number(payload)",
+                "tot": "jsonata"
             }
         ],
         "action": "",
@@ -2570,6 +2570,29 @@
             [
                 "dacaa6dc6cd9b8f3"
             ]
+        ]
+    },
+    {
+        "id": "1b17430b38e464f9",
+        "type": "switch",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 330,
+        "y": 740,
+        "wires": [
+            []
         ]
     }
 ]
