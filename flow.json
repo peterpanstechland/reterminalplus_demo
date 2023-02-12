@@ -452,7 +452,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "47a469b15c9c5f27",
+        "broker": "2e693d5153a74d1a",
         "x": 480,
         "y": 180,
         "wires": []
@@ -503,7 +503,7 @@
         "topic": "sensor/cputemp",
         "qos": "0",
         "datatype": "auto",
-        "broker": "47a469b15c9c5f27",
+        "broker": "2e693d5153a74d1a",
         "nl": false,
         "rap": true,
         "rh": 0,
