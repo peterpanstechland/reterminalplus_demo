@@ -314,8 +314,9 @@
         "tab": "fbd536a.22bf9c8",
         "order": 1,
         "disp": true,
-        "width": "6",
-        "collapse": false
+        "width": "10",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "fbd536a.22bf9c8",
@@ -2418,8 +2419,8 @@
         "group": "c7a43587.2944e8",
         "name": "",
         "order": 0,
-        "width": "6",
-        "height": "5",
+        "width": "0",
+        "height": "0",
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": true,
         "fwdInMessages": true,
