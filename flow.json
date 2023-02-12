@@ -2594,5 +2594,99 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "7a7785898c21c9da",
+        "type": "inject",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "f1c14a485bda7b8a"
+            ]
+        ]
+    },
+    {
+        "id": "f1c14a485bda7b8a",
+        "type": "exec",
+        "z": "6b0c0aada256f58a",
+        "command": "raspistill",
+        "addpay": false,
+        "append": "-w 320 -h 240 -o -",
+        "useSpawn": "false",
+        "timer": "",
+        "winHide": false,
+        "oldrc": false,
+        "name": "",
+        "x": 880,
+        "y": 380,
+        "wires": [
+            [
+                "82f23d7023ce8235"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "82f23d7023ce8235",
+        "type": "base64",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "action": "str",
+        "property": "payload",
+        "x": 1040,
+        "y": 380,
+        "wires": [
+            [
+                "7fc5c7a6d9f3c29d"
+            ]
+        ]
+    },
+    {
+        "id": "7fc5c7a6d9f3c29d",
+        "type": "template",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"320px\" height=\"240px\" src=\"data:image/jpg;base64,{{{payload}}}\">",
+        "output": "str",
+        "x": 1200,
+        "y": 440,
+        "wires": [
+            [
+                "c568168db561a16c"
+            ]
+        ]
+    },
+    {
+        "id": "c568168db561a16c",
+        "type": "ui_template",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "name": "",
+        "order": 0,
+        "width": "6",
+        "height": "5",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "templateScope": "local",
+        "x": 1300,
+        "y": 380,
+        "wires": [
+            []
+        ]
     }
 ]
