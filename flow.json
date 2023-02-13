@@ -55,6 +55,14 @@
         "env": []
     },
     {
+        "id": "cfaa80b5639b0d61",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "2631142d.86f8fc",
         "type": "ui_group",
         "name": "CPU",
@@ -2478,6 +2486,61 @@
         "statusType": "auto",
         "x": 530,
         "y": 380,
+        "wires": []
+    },
+    {
+        "id": "76481a5d5a955aa7",
+        "type": "mqtt in",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "sensecapTerminal/status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2e693d5153a74d1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 550,
+        "y": 240,
+        "wires": [
+            [
+                "a5190cee1e6b2cb3"
+            ]
+        ]
+    },
+    {
+        "id": "14ca4f1582ad2a1f",
+        "type": "mqtt out",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "sensecapTerminal/status",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2e693d5153a74d1a",
+        "x": 950,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a5190cee1e6b2cb3",
+        "type": "debug",
+        "z": "cfaa80b5639b0d61",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
         "wires": []
     }
 ]
