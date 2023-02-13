@@ -2660,34 +2660,5 @@
                 "1f1a6ec73c688d12"
             ]
         ]
-    },
-    {
-        "id": "74c3019a4f80124f",
-        "type": "inject",
-        "z": "cfaa80b5639b0d61",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 790,
-        "y": 1020,
-        "wires": [
-            [
-                "f2161196a67cd1c9"
-            ]
-        ]
     }
 ]
