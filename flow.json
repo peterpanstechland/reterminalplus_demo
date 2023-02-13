@@ -2588,5 +2588,106 @@
                 "375bad1dcb76dd56"
             ]
         ]
+    },
+    {
+        "id": "e0337bd4ca36f250",
+        "type": "mqtt in",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "/topic/qos1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2e693d5153a74d1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 560,
+        "y": 740,
+        "wires": [
+            [
+                "646e45696bfb0626"
+            ]
+        ]
+    },
+    {
+        "id": "1f1a6ec73c688d12",
+        "type": "mqtt out",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "/topic/qos1",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2e693d5153a74d1a",
+        "x": 970,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "646e45696bfb0626",
+        "type": "debug",
+        "z": "cfaa80b5639b0d61",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "f2161196a67cd1c9",
+        "type": "random",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "low": "1",
+        "high": "2",
+        "inte": "true",
+        "property": "payload",
+        "x": 940,
+        "y": 1020,
+        "wires": [
+            [
+                "1f1a6ec73c688d12"
+            ]
+        ]
+    },
+    {
+        "id": "74c3019a4f80124f",
+        "type": "inject",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 790,
+        "y": 1020,
+        "wires": [
+            [
+                "f2161196a67cd1c9"
+            ]
+        ]
     }
 ]
