@@ -2542,5 +2542,51 @@
         "x": 700,
         "y": 400,
         "wires": []
+    },
+    {
+        "id": "375bad1dcb76dd56",
+        "type": "random",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "low": 1,
+        "high": "2",
+        "inte": "true",
+        "property": "payload",
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "14ca4f1582ad2a1f"
+            ]
+        ]
+    },
+    {
+        "id": "2752a2ab094ad5f5",
+        "type": "inject",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 720,
+        "y": 520,
+        "wires": [
+            [
+                "375bad1dcb76dd56"
+            ]
+        ]
     }
 ]
