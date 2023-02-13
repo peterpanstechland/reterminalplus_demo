@@ -2493,7 +2493,7 @@
         "type": "mqtt in",
         "z": "cfaa80b5639b0d61",
         "name": "",
-        "topic": "/topic/qos0",
+        "topic": "/status",
         "qos": "2",
         "datatype": "auto-detect",
         "broker": "2e693d5153a74d1a",
@@ -2501,7 +2501,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 500,
+        "x": 490,
         "y": 240,
         "wires": [
             [
@@ -2514,7 +2514,7 @@
         "type": "mqtt out",
         "z": "cfaa80b5639b0d61",
         "name": "",
-        "topic": "/topic/qos0",
+        "topic": "/status",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -2523,7 +2523,7 @@
         "correl": "",
         "expiry": "",
         "broker": "2e693d5153a74d1a",
-        "x": 910,
+        "x": 890,
         "y": 260,
         "wires": []
     },
