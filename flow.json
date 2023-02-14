@@ -32,6 +32,14 @@
         "env": []
     },
     {
+        "id": "cfaa80b5639b0d61",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "9f3346aa.d4fc48",
         "type": "tab",
         "label": "System",
@@ -51,14 +59,6 @@
         "type": "tab",
         "label": "PLC_FAN_GPIO",
         "disabled": true,
-        "info": "",
-        "env": []
-    },
-    {
-        "id": "cfaa80b5639b0d61",
-        "type": "tab",
-        "label": "Flow 1",
-        "disabled": false,
         "info": "",
         "env": []
     },
@@ -1222,6 +1222,107 @@
         "wires": [
             [
                 "f3095140cc399c7c"
+            ]
+        ]
+    },
+    {
+        "id": "76481a5d5a955aa7",
+        "type": "mqtt in",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "/topic/ST_status",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "2e693d5153a74d1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 520,
+        "y": 240,
+        "wires": [
+            [
+                "a5190cee1e6b2cb3"
+            ]
+        ]
+    },
+    {
+        "id": "14ca4f1582ad2a1f",
+        "type": "mqtt out",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "topic": "/topic/ST_status",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2e693d5153a74d1a",
+        "x": 920,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "a5190cee1e6b2cb3",
+        "type": "debug",
+        "z": "cfaa80b5639b0d61",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "375bad1dcb76dd56",
+        "type": "random",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "low": "1",
+        "high": "2",
+        "inte": "true",
+        "property": "payload",
+        "x": 880,
+        "y": 520,
+        "wires": [
+            [
+                "14ca4f1582ad2a1f"
+            ]
+        ]
+    },
+    {
+        "id": "2752a2ab094ad5f5",
+        "type": "inject",
+        "z": "cfaa80b5639b0d61",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 730,
+        "y": 520,
+        "wires": [
+            [
+                "375bad1dcb76dd56"
             ]
         ]
     },
@@ -2487,106 +2588,5 @@
         "x": 530,
         "y": 380,
         "wires": []
-    },
-    {
-        "id": "76481a5d5a955aa7",
-        "type": "mqtt in",
-        "z": "cfaa80b5639b0d61",
-        "name": "",
-        "topic": "/topic/ST_status",
-        "qos": "2",
-        "datatype": "auto-detect",
-        "broker": "2e693d5153a74d1a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 520,
-        "y": 240,
-        "wires": [
-            [
-                "a5190cee1e6b2cb3"
-            ]
-        ]
-    },
-    {
-        "id": "14ca4f1582ad2a1f",
-        "type": "mqtt out",
-        "z": "cfaa80b5639b0d61",
-        "name": "",
-        "topic": "/topic/ST_status",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "2e693d5153a74d1a",
-        "x": 920,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "a5190cee1e6b2cb3",
-        "type": "debug",
-        "z": "cfaa80b5639b0d61",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 700,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "375bad1dcb76dd56",
-        "type": "random",
-        "z": "cfaa80b5639b0d61",
-        "name": "",
-        "low": "1",
-        "high": "2",
-        "inte": "true",
-        "property": "payload",
-        "x": 880,
-        "y": 520,
-        "wires": [
-            [
-                "14ca4f1582ad2a1f"
-            ]
-        ]
-    },
-    {
-        "id": "2752a2ab094ad5f5",
-        "type": "inject",
-        "z": "cfaa80b5639b0d61",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "1",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "1",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 730,
-        "y": 520,
-        "wires": [
-            [
-                "375bad1dcb76dd56"
-            ]
-        ]
     }
 ]
