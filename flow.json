@@ -494,7 +494,7 @@
         "type": "debug",
         "z": "2968a4fcf75e9496",
         "name": "MQTT Message",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
