@@ -34,7 +34,7 @@
     {
         "id": "cfaa80b5639b0d61",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "SenseCAP Terminal",
         "disabled": false,
         "info": "",
         "env": []
@@ -1238,8 +1238,8 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 520,
-        "y": 240,
+        "x": 460,
+        "y": 400,
         "wires": [
             [
                 "a5190cee1e6b2cb3"
@@ -1260,8 +1260,8 @@
         "correl": "",
         "expiry": "",
         "broker": "2e693d5153a74d1a",
-        "x": 920,
-        "y": 260,
+        "x": 1140,
+        "y": 520,
         "wires": []
     },
     {
@@ -1289,7 +1289,7 @@
         "high": "2",
         "inte": "true",
         "property": "payload",
-        "x": 880,
+        "x": 940,
         "y": 520,
         "wires": [
             [
