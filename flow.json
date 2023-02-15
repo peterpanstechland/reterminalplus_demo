@@ -1112,7 +1112,7 @@
             [
                 "599c976b89065896",
                 "f1eba6952e51e4e3",
-                "5b55417ebc5b77b6"
+                "4ee0059d689b7373"
             ]
         ]
     },
@@ -1201,6 +1201,33 @@
         "wires": [
             [
                 "6cfdc3020c48133a"
+            ]
+        ]
+    },
+    {
+        "id": "4ee0059d689b7373",
+        "type": "change",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "num_people",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1040,
+        "y": 320,
+        "wires": [
+            [
+                "5b55417ebc5b77b6"
             ]
         ]
     },
