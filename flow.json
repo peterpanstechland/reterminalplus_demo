@@ -1041,8 +1041,7 @@
         "y": 560,
         "wires": [
             [
-                "7fc5c7a6d9f3c29d",
-                "dacaa6dc6cd9b8f3"
+                "7fc5c7a6d9f3c29d"
             ]
         ]
     },
@@ -1061,7 +1060,8 @@
         "y": 540,
         "wires": [
             [
-                "c568168db561a16c"
+                "c568168db561a16c",
+                "dacaa6dc6cd9b8f3"
             ]
         ]
     },
