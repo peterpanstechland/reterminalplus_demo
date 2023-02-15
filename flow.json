@@ -1100,7 +1100,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar head_count = { head_count: head };\nvar hard_hat_count = { hard_hat_count: hard_hat };\nvar num_people = { num_people: people };\n\nreturn [head_count, hard_hat_count, num_people];\n\n",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar msg1 = { payload: head };\nvar msg2 = { payload: hard_hat };\nvar msg3 = { payload: people };\n\nreturn [msg1, msg2, msg3];\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
