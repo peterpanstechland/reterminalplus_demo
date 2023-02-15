@@ -972,24 +972,8 @@
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1130,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "46a99fb2e5d7aebc",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1180,
-        "y": 280,
+        "x": 1270,
+        "y": 320,
         "wires": []
     },
     {
@@ -1126,13 +1110,46 @@
         "y": 240,
         "wires": [
             [
-                "5b55417ebc5b77b6",
-                "9844b941f1d79f8f"
+                "4ee0059d689b7373"
             ]
         ]
     },
     {
-        "id": "9844b941f1d79f8f",
+        "id": "6cfdc3020c48133a",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "72fc319.cc425d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Number of Person",
+        "format": "{{msg.num_people}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1130,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "c80dd1f2efe53590",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "72fc319.cc425d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Number of Person",
+        "format": "{{msg.num_people}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1130,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "4ee0059d689b7373",
         "type": "change",
         "z": "6b0c0aada256f58a",
         "name": "",
@@ -1150,11 +1167,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1000,
-        "y": 340,
+        "x": 1040,
+        "y": 320,
         "wires": [
             [
-                "46a99fb2e5d7aebc"
+                "5b55417ebc5b77b6"
             ]
         ]
     },
