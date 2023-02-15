@@ -1110,9 +1110,7 @@
         "y": 320,
         "wires": [
             [
-                "599c976b89065896",
-                "f1eba6952e51e4e3",
-                "5b55417ebc5b77b6"
+                "b4a1a38879875498"
             ]
         ]
     },
@@ -1149,86 +1147,6 @@
         "x": 1290,
         "y": 380,
         "wires": []
-    },
-    {
-        "id": "599c976b89065896",
-        "type": "change",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "head_count",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 380,
-        "wires": [
-            [
-                "c80dd1f2efe53590",
-                "b4a1a38879875498"
-            ]
-        ]
-    },
-    {
-        "id": "f1eba6952e51e4e3",
-        "type": "change",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "hard_hat_count",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1050,
-        "y": 440,
-        "wires": [
-            [
-                "6cfdc3020c48133a"
-            ]
-        ]
-    },
-    {
-        "id": "4ee0059d689b7373",
-        "type": "change",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "num_people",
-                "pt": "msg",
-                "to": "payload",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1040,
-        "y": 260,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "b4a1a38879875498",
