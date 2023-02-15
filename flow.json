@@ -1116,16 +1116,18 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.lable;\n\nvar head = 0;\nvar had_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"had_hat\"){\n        had_hat++;\n    }\n}\n\nvar msg1 = { payload: count };\n\nreturn msg1;\n\n",
+        "func": "var newMsg = msg.payload.result.lable;\n\nvar head = 0;\nvar had_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"had_hat\"){\n        had_hat++;\n    }\n}\n\nvar msg1 = { payload: head };\n\nreturn msg1;\n\n",
         "outputs": 1,
-        "noerr": 1,
+        "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 880,
         "y": 240,
         "wires": [
-            []
+            [
+                "46a99fb2e5d7aebc"
+            ]
         ]
     },
     {
