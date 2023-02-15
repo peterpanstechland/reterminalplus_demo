@@ -1112,7 +1112,7 @@
             [
                 "599c976b89065896",
                 "f1eba6952e51e4e3",
-                "4ee0059d689b7373"
+                "5b55417ebc5b77b6"
             ]
         ]
     },
@@ -1126,7 +1126,7 @@
         "height": 0,
         "name": "",
         "label": "People With Hat",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.hard_hat_count}}",
         "layout": "row-spread",
         "className": "",
         "x": 1280,
@@ -1143,7 +1143,7 @@
         "height": 0,
         "name": "",
         "label": "People Without Hat",
-        "format": "{{msg.payload}}",
+        "format": "{{msg.head_count}}",
         "layout": "row-spread",
         "className": "",
         "x": 1290,
@@ -1225,11 +1225,9 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 320,
+        "y": 260,
         "wires": [
-            [
-                "5b55417ebc5b77b6"
-            ]
+            []
         ]
     },
     {
