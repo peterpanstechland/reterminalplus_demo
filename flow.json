@@ -969,7 +969,7 @@
         "height": 0,
         "name": "",
         "label": "Number of Person",
-        "format": "{{msg.payload.num_people}}",
+        "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
         "x": 1130,
