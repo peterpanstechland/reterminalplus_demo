@@ -1140,7 +1140,7 @@
         "topic": "plc/fan_stat_pub",
         "qos": "0",
         "datatype": "auto-detect",
-        "broker": "47a469b15c9c5f27",
+        "broker": "2e693d5153a74d1a",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -1166,7 +1166,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "47a469b15c9c5f27",
+        "broker": "2e693d5153a74d1a",
         "x": 620,
         "y": 140,
         "wires": []
