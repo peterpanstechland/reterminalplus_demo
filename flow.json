@@ -1110,7 +1110,7 @@
         "y": 320,
         "wires": [
             [
-                "0768efc6fb2ea23e"
+                "d0827f7e5fa0899a"
             ]
         ]
     },
@@ -1157,8 +1157,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 1060,
@@ -1213,9 +1213,7 @@
         "x": 960,
         "y": 360,
         "wires": [
-            [
-                "d0827f7e5fa0899a"
-            ]
+            []
         ]
     },
     {
