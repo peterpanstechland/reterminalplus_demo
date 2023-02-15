@@ -1116,7 +1116,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\n\nvar head_count = { payload: head };\nvar hard_hat_count = { payload: hard_hat };\nvar num_people = head + hard_hat;\nreturn head_count, hard_hat_count, num_people;\n\n",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\nvar head_count = { payload: head };\nvar hard_hat_count = { payload: hard_hat };\nvar num_people = { payload: people };\nreturn head_count, hard_hat_count, num_people;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
