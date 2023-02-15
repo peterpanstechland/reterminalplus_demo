@@ -1116,7 +1116,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.lables;\n\nvar head = 0;\nvar had_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"had_hat\"){\n        had_hat++;\n    }\n}\n\nvar msg1 = { payload: head };\n\nreturn msg1;\n\n",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar had_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"had_hat\"){\n        had_hat++;\n    }\n}\n\nvar msg1 = { payload: head };\n\nreturn msg1;\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
