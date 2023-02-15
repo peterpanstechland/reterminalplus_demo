@@ -968,11 +968,11 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Number of people",
+        "label": "Total Number of People",
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1270,
+        "x": 1310,
         "y": 320,
         "wires": []
     },
@@ -1106,11 +1106,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 880,
-        "y": 240,
+        "x": 840,
+        "y": 320,
         "wires": [
             [
-                "4ee0059d689b7373"
+                "599c976b89065896",
+                "f1eba6952e51e4e3",
+                "5b55417ebc5b77b6"
             ]
         ]
     },
@@ -1127,8 +1129,8 @@
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1130,
-        "y": 200,
+        "x": 1290,
+        "y": 440,
         "wires": []
     },
     {
@@ -1144,19 +1146,19 @@
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1130,
-        "y": 260,
+        "x": 1290,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "4ee0059d689b7373",
+        "id": "599c976b89065896",
         "type": "change",
         "z": "6b0c0aada256f58a",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "num_people",
+                "p": "head_count",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
@@ -1168,10 +1170,37 @@
         "to": "",
         "reg": false,
         "x": 1040,
-        "y": 320,
+        "y": 380,
         "wires": [
             [
-                "5b55417ebc5b77b6"
+                "c80dd1f2efe53590"
+            ]
+        ]
+    },
+    {
+        "id": "f1eba6952e51e4e3",
+        "type": "change",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "hard_hat_count",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 440,
+        "wires": [
+            [
+                "6cfdc3020c48133a"
             ]
         ]
     },
