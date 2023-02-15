@@ -1241,7 +1241,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "msg1",
+        "complete": "payload.msg1",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
