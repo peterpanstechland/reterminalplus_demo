@@ -1241,7 +1241,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "msg2",
+        "complete": "msg1",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
