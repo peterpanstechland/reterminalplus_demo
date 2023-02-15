@@ -1100,7 +1100,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar msg1 = { payload: head };\nvar msg2 = { payload: hard_hat };\nvar msg3 = { payload: people };\n\nreturn [msg1, msg2, msg3];\n\n",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nvar people = 0;\n\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar msg1 = { payload: head };\nvar msg2 = { payload: hard_hat };\nvar msg3 = { payload: people };\n\nreturn [msg1, msg2, msg3];\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1110,7 +1110,6 @@
         "y": 320,
         "wires": [
             [
-                "b4a1a38879875498",
                 "0768efc6fb2ea23e"
             ]
         ]
@@ -1150,28 +1149,11 @@
         "wires": []
     },
     {
-        "id": "b4a1a38879875498",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 10",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1260,
-        "y": 500,
-        "wires": []
-    },
-    {
         "id": "d0827f7e5fa0899a",
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 11",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1179,7 +1161,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1000,
+        "x": 1060,
         "y": 280,
         "wires": []
     },
@@ -1222,14 +1204,14 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 4",
-        "func": "var outputMsgs = [];\nvar words = msg.payload.split(\" \");\nfor (var w in words) {\n    outputMsgs.push({ payload: words[w] });\n}\nreturn [outputMsgs];",
+        "func": "",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 900,
-        "y": 380,
+        "x": 960,
+        "y": 360,
         "wires": [
             [
                 "d0827f7e5fa0899a"
