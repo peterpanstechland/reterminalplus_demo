@@ -1143,7 +1143,7 @@
         "height": 0,
         "name": "",
         "label": "People Without Hat",
-        "format": "{{msg.head_count}}",
+        "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
         "x": 1290,
