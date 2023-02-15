@@ -968,7 +968,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Number of Person",
+        "label": "Number of people",
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
