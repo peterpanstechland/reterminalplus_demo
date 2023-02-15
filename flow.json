@@ -1106,13 +1106,14 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 840,
+        "x": 820,
         "y": 320,
         "wires": [
             [
                 "599c976b89065896",
                 "f1eba6952e51e4e3",
-                "4ee0059d689b7373"
+                "4ee0059d689b7373",
+                "b4a1a38879875498"
             ]
         ]
     },
@@ -1230,6 +1231,22 @@
                 "5b55417ebc5b77b6"
             ]
         ]
+    },
+    {
+        "id": "b4a1a38879875498",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1300,
+        "y": 520,
+        "wires": []
     },
     {
         "id": "a9d5c908201f91f2",
