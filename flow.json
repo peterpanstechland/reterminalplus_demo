@@ -1100,7 +1100,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 1",
-        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar msg1 = { payload: head };\nvar msg2 = { payload: hard_hat };\nvar msg3 = { payload: people };\n\nreturn [msg1, msg2, msg3];\n\n",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar head_count = { payload: head };\nvar msg2 = { payload: hard_hat };\nvar msg3 = { payload: people };\n\nreturn [head_count, msg2, msg3];\n\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1112,8 +1112,7 @@
             [
                 "599c976b89065896",
                 "f1eba6952e51e4e3",
-                "4ee0059d689b7373",
-                "b4a1a38879875498"
+                "4ee0059d689b7373"
             ]
         ]
     },
@@ -1174,7 +1173,8 @@
         "y": 380,
         "wires": [
             [
-                "c80dd1f2efe53590"
+                "c80dd1f2efe53590",
+                "b4a1a38879875498"
             ]
         ]
     },
@@ -1241,7 +1241,7 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload.msg1",
+        "complete": "payload",
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
