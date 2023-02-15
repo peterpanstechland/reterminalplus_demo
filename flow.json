@@ -1127,8 +1127,34 @@
         "wires": [
             [
                 "46a99fb2e5d7aebc",
-                "5b55417ebc5b77b6"
+                "5b55417ebc5b77b6",
+                "9844b941f1d79f8f"
             ]
+        ]
+    },
+    {
+        "id": "9844b941f1d79f8f",
+        "type": "change",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "num_people",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1000,
+        "y": 340,
+        "wires": [
+            []
         ]
     },
     {
