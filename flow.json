@@ -960,28 +960,6 @@
         ]
     },
     {
-        "id": "e3ad7fd9bfeaf4af",
-        "type": "mqtt in",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "topic": "jetson/num_person",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2e693d5153a74d1a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 690,
-        "y": 140,
-        "wires": [
-            [
-                "5b55417ebc5b77b6",
-                "46a99fb2e5d7aebc"
-            ]
-        ]
-    },
-    {
         "id": "5b55417ebc5b77b6",
         "type": "ui_text",
         "z": "6b0c0aada256f58a",
@@ -1037,11 +1015,12 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 550,
-        "y": 560,
+        "x": 590,
+        "y": 540,
         "wires": [
             [
-                "7fc5c7a6d9f3c29d"
+                "7fc5c7a6d9f3c29d",
+                "3e290b9c4040e460"
             ]
         ]
     },
@@ -1131,6 +1110,23 @@
         "x": 2285,
         "y": 1171,
         "wires": []
+    },
+    {
+        "id": "3e290b9c4040e460",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 1",
+        "func": "var newMsg = msg.payload.result.lable;\n\nvar head = 0;\nvar had_hat = 0;\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"had_hat\"){\n        had_hat++;\n    }\n}\n\nvar msg1 = { payload: count };\n\nreturn msg1;\n\n",
+        "outputs": 1,
+        "noerr": 1,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 240,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "a9d5c908201f91f2",
