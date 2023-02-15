@@ -1111,7 +1111,7 @@
         "wires": [
             [
                 "b4a1a38879875498",
-                "d0827f7e5fa0899a"
+                "0768efc6fb2ea23e"
             ]
         ]
     },
@@ -1182,6 +1182,59 @@
         "x": 1000,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "f107fde33e23107f",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "717b09f065990c4a",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0768efc6fb2ea23e",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 4",
+        "func": "var outputMsgs = [];\nvar words = msg.payload.split(\" \");\nfor (var w in words) {\n    outputMsgs.push({ payload: words[w] });\n}\nreturn [outputMsgs];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 380,
+        "wires": [
+            [
+                "d0827f7e5fa0899a"
+            ]
+        ]
     },
     {
         "id": "a9d5c908201f91f2",
