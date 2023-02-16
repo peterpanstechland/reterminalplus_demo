@@ -1101,7 +1101,7 @@
         "z": "6b0c0aada256f58a",
         "name": "function 1",
         "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar hard_hat = 0;\nvar people = 0;\n\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"hard_hat\"){\n        hard_hat++;\n    }\n}\nvar people = head + hard_hat;\n\nvar msg1 = { head: head };\nvar msg2 = { hard_hat: hard_hat };\nvar msg3 = { people: people };\n\nreturn [msg1, msg2, msg3];\n\n",
-        "outputs": 1,
+        "outputs": 3,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -1111,6 +1111,12 @@
         "wires": [
             [
                 "d0827f7e5fa0899a"
+            ],
+            [
+                "a8796f72d0fbb18f"
+            ],
+            [
+                "caac3d765b2bee3c"
             ]
         ]
     },
@@ -1166,55 +1172,38 @@
         "wires": []
     },
     {
-        "id": "f107fde33e23107f",
-        "type": "function",
+        "id": "a8796f72d0fbb18f",
+        "type": "debug",
         "z": "6b0c0aada256f58a",
-        "name": "function 2",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 900,
-        "y": 420,
-        "wires": [
-            []
-        ]
+        "name": "debug 12",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 340,
+        "wires": []
     },
     {
-        "id": "717b09f065990c4a",
-        "type": "function",
+        "id": "caac3d765b2bee3c",
+        "type": "debug",
         "z": "6b0c0aada256f58a",
-        "name": "function 3",
-        "func": "\nreturn [[msg1, msg2, msg3]];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 880,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "0768efc6fb2ea23e",
-        "type": "function",
-        "z": "6b0c0aada256f58a",
-        "name": "function 4",
-        "func": "",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 960,
-        "y": 360,
-        "wires": [
-            []
-        ]
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 380,
+        "wires": []
     },
     {
         "id": "a9d5c908201f91f2",
