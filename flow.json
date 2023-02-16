@@ -300,20 +300,12 @@
         "id": "db172adca8234e63",
         "type": "ui_group",
         "name": "Default",
-        "tab": "19a149e811eb9626",
+        "tab": "",
         "order": 1,
         "disp": true,
         "width": "10",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "19a149e811eb9626",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "c7a43587.2944e8",
@@ -1035,7 +1027,7 @@
         "group": "c7a43587.2944e8",
         "name": "",
         "order": 1,
-        "width": "6",
+        "width": "13",
         "height": "7",
         "format": "<div ng-bind-html=\"msg.payload\"></div>",
         "storeOutMessages": true,
