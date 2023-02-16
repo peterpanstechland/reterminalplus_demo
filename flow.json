@@ -972,8 +972,8 @@
         "format": "{{msg.num_people}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1310,
-        "y": 320,
+        "x": 1090,
+        "y": 380,
         "wires": []
     },
     {
@@ -1110,13 +1110,13 @@
         "y": 320,
         "wires": [
             [
-                "d0827f7e5fa0899a"
+                "c80dd1f2efe53590"
             ],
             [
-                "a8796f72d0fbb18f"
+                "6cfdc3020c48133a"
             ],
             [
-                "caac3d765b2bee3c"
+                "5b55417ebc5b77b6"
             ]
         ]
     },
@@ -1133,8 +1133,8 @@
         "format": "{{msg.hard_hat_count}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1280,
-        "y": 440,
+        "x": 1060,
+        "y": 340,
         "wires": []
     },
     {
@@ -1150,59 +1150,8 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1290,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "d0827f7e5fa0899a",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 11",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "a8796f72d0fbb18f",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 12",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "caac3d765b2bee3c",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 13",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1060,
-        "y": 380,
+        "x": 1070,
+        "y": 300,
         "wires": []
     },
     {
