@@ -1153,7 +1153,7 @@
         "type": "debug",
         "z": "6b0c0aada256f58a",
         "name": "debug 11",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
