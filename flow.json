@@ -963,7 +963,7 @@
         "id": "5b55417ebc5b77b6",
         "type": "ui_text",
         "z": "6b0c0aada256f58a",
-        "group": "72fc319.cc425d",
+        "group": "c7a43587.2944e8",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -1019,7 +1019,7 @@
         "syntax": "mustache",
         "template": "<img width=\"640px\" height=\"480px\" src=\"data:image/jpg;base64,{{{payload.image}}}\">",
         "output": "str",
-        "x": 900,
+        "x": 820,
         "y": 540,
         "wires": [
             [
@@ -1032,7 +1032,7 @@
         "id": "c568168db561a16c",
         "type": "ui_template",
         "z": "6b0c0aada256f58a",
-        "group": "72fc319.cc425d",
+        "group": "db172adca8234e63",
         "name": "",
         "order": 1,
         "width": "6",
@@ -1107,7 +1107,7 @@
         "finalize": "",
         "libs": [],
         "x": 820,
-        "y": 320,
+        "y": 340,
         "wires": [
             [
                 "c80dd1f2efe53590"
@@ -1124,7 +1124,7 @@
         "id": "6cfdc3020c48133a",
         "type": "ui_text",
         "z": "6b0c0aada256f58a",
-        "group": "72fc319.cc425d",
+        "group": "c7a43587.2944e8",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -1141,7 +1141,7 @@
         "id": "c80dd1f2efe53590",
         "type": "ui_text",
         "z": "6b0c0aada256f58a",
-        "group": "72fc319.cc425d",
+        "group": "c7a43587.2944e8",
         "order": 1,
         "width": 0,
         "height": 0,
