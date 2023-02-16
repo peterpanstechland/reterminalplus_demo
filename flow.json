@@ -991,12 +991,13 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 590,
+        "x": 510,
         "y": 420,
         "wires": [
             [
                 "7fc5c7a6d9f3c29d",
-                "3e290b9c4040e460"
+                "3e290b9c4040e460",
+                "235ffb54633d131e"
             ]
         ]
     },
@@ -1145,6 +1146,23 @@
         "x": 1070,
         "y": 300,
         "wires": []
+    },
+    {
+        "id": "235ffb54633d131e",
+        "type": "file",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "filename": "test.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 690,
+        "y": 680,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "a9d5c908201f91f2",
