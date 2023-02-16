@@ -996,8 +996,7 @@
         "wires": [
             [
                 "7fc5c7a6d9f3c29d",
-                "3e290b9c4040e460",
-                "235ffb54633d131e"
+                "3e290b9c4040e460"
             ]
         ]
     },
@@ -1145,61 +1144,6 @@
         "className": "",
         "x": 1070,
         "y": 300,
-        "wires": []
-    },
-    {
-        "id": "235ffb54633d131e",
-        "type": "file",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "filename": "/home/pi/test.txt",
-        "filenameType": "str",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "none",
-        "x": 820,
-        "y": 760,
-        "wires": [
-            [
-                "aa31d36ac611d693"
-            ]
-        ]
-    },
-    {
-        "id": "aa31d36ac611d693",
-        "type": "file in",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "filename": "/home/pi/test.txt",
-        "filenameType": "str",
-        "format": "utf8",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "none",
-        "allProps": false,
-        "x": 1020,
-        "y": 760,
-        "wires": [
-            [
-                "0e1b5ecedb4361f0"
-            ]
-        ]
-    },
-    {
-        "id": "0e1b5ecedb4361f0",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 760,
         "wires": []
     },
     {
