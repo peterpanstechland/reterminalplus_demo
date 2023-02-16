@@ -1187,7 +1187,7 @@
         "type": "function",
         "z": "6b0c0aada256f58a",
         "name": "function 3",
-        "func": "\nreturn msg;",
+        "func": "\nreturn [[msg1, msg2, msg3]];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
