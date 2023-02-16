@@ -1152,13 +1152,13 @@
         "type": "file",
         "z": "6b0c0aada256f58a",
         "name": "",
-        "filename": "test.txt",
+        "filename": "/home/pi/test.txt",
         "filenameType": "str",
         "appendNewline": true,
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 790,
+        "x": 820,
         "y": 760,
         "wires": [
             [
@@ -1171,14 +1171,14 @@
         "type": "file in",
         "z": "6b0c0aada256f58a",
         "name": "",
-        "filename": "test.txt",
+        "filename": "/home/pi/test.txt",
         "filenameType": "str",
         "format": "utf8",
         "chunk": false,
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 950,
+        "x": 1020,
         "y": 760,
         "wires": [
             [
@@ -1198,7 +1198,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1160,
+        "x": 1120,
         "y": 760,
         "wires": []
     },
