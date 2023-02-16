@@ -16,14 +16,6 @@
         "env": []
     },
     {
-        "id": "6b0c0aada256f58a",
-        "type": "tab",
-        "label": "Jetson",
-        "disabled": false,
-        "info": "",
-        "env": []
-    },
-    {
         "id": "04d6ca3767c80bee",
         "type": "tab",
         "label": "Control FAN",
@@ -35,6 +27,14 @@
         "id": "cfaa80b5639b0d61",
         "type": "tab",
         "label": "SenseCAP Terminal",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6b0c0aada256f58a",
+        "type": "tab",
+        "label": "Jetson",
         "disabled": false,
         "info": "",
         "env": []
@@ -358,7 +358,7 @@
         "type": "debug",
         "z": "2968a4fcf75e9496",
         "name": "Aedes Events",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -486,7 +486,7 @@
         "type": "debug",
         "z": "2968a4fcf75e9496",
         "name": "MQTT Message",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -952,201 +952,6 @@
         ]
     },
     {
-        "id": "5b55417ebc5b77b6",
-        "type": "ui_text",
-        "z": "6b0c0aada256f58a",
-        "group": "c7a43587.2944e8",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Total Number of People",
-        "format": "{{msg.people}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1090,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "382efdde102aab89",
-        "type": "comment",
-        "z": "6b0c0aada256f58a",
-        "name": "Jetson People Counting",
-        "info": "Couting people with coco-net model on jetson",
-        "x": 700,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "6276dc539a31010c",
-        "type": "mqtt in",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "topic": "jetson/num_person_image",
-        "qos": "0",
-        "datatype": "auto-detect",
-        "broker": "2e693d5153a74d1a",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "inputs": 0,
-        "x": 510,
-        "y": 420,
-        "wires": [
-            [
-                "7fc5c7a6d9f3c29d",
-                "3e290b9c4040e460"
-            ]
-        ]
-    },
-    {
-        "id": "7fc5c7a6d9f3c29d",
-        "type": "template",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "field": "payload",
-        "fieldType": "msg",
-        "format": "handlebars",
-        "syntax": "mustache",
-        "template": "<img width=\"640px\" height=\"480px\" src=\"data:image/jpg;base64,{{{payload.image}}}\">",
-        "output": "str",
-        "x": 820,
-        "y": 540,
-        "wires": [
-            [
-                "c568168db561a16c",
-                "dacaa6dc6cd9b8f3"
-            ]
-        ]
-    },
-    {
-        "id": "c568168db561a16c",
-        "type": "ui_template",
-        "z": "6b0c0aada256f58a",
-        "group": "c7a43587.2944e8",
-        "name": "",
-        "order": 1,
-        "width": "13",
-        "height": "7",
-        "format": "<div ng-bind-html=\"msg.payload\"></div>",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 1060,
-        "y": 540,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "dacaa6dc6cd9b8f3",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "debug 8",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "1c9124e9.e36edb",
-        "type": "inject",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1889,
-        "y": 1074,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "48a892ea.b7576c",
-        "type": "debug",
-        "z": "6b0c0aada256f58a",
-        "name": "",
-        "active": true,
-        "console": "false",
-        "complete": "false",
-        "x": 2285,
-        "y": 1171,
-        "wires": []
-    },
-    {
-        "id": "3e290b9c4040e460",
-        "type": "function",
-        "z": "6b0c0aada256f58a",
-        "name": "function 1",
-        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar helmet = 0;\nvar people = 0;\n\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"helmet\"){\n        helmet++;\n    }\n}\nvar people = head + helmet;\n\nvar msg1 = { head: head };\nvar msg2 = { helmet: helmet };\nvar msg3 = { people: people };\n\nreturn [msg1, msg2, msg3];\n\n",
-        "outputs": 3,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 820,
-        "y": 340,
-        "wires": [
-            [
-                "c80dd1f2efe53590"
-            ],
-            [
-                "6cfdc3020c48133a"
-            ],
-            [
-                "5b55417ebc5b77b6"
-            ]
-        ]
-    },
-    {
-        "id": "6cfdc3020c48133a",
-        "type": "ui_text",
-        "z": "6b0c0aada256f58a",
-        "group": "c7a43587.2944e8",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "People With Hat",
-        "format": "{{msg.helmet}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1060,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "c80dd1f2efe53590",
-        "type": "ui_text",
-        "z": "6b0c0aada256f58a",
-        "group": "c7a43587.2944e8",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "People Without Hat",
-        "format": "{{msg.head}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1070,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "a9d5c908201f91f2",
         "type": "mqtt in",
         "z": "04d6ca3767c80bee",
@@ -1357,6 +1162,201 @@
                 "375bad1dcb76dd56"
             ]
         ]
+    },
+    {
+        "id": "5b55417ebc5b77b6",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Total Number of People",
+        "format": "{{msg.people}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1090,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "382efdde102aab89",
+        "type": "comment",
+        "z": "6b0c0aada256f58a",
+        "name": "Jetson People Counting",
+        "info": "Couting people with coco-net model on jetson",
+        "x": 700,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "6276dc539a31010c",
+        "type": "mqtt in",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "topic": "jetson/num_person_image",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "2e693d5153a74d1a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "7fc5c7a6d9f3c29d",
+                "3e290b9c4040e460"
+            ]
+        ]
+    },
+    {
+        "id": "7fc5c7a6d9f3c29d",
+        "type": "template",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img width=\"640px\" height=\"480px\" src=\"data:image/jpg;base64,{{{payload.image}}}\">",
+        "output": "str",
+        "x": 820,
+        "y": 540,
+        "wires": [
+            [
+                "c568168db561a16c",
+                "dacaa6dc6cd9b8f3"
+            ]
+        ]
+    },
+    {
+        "id": "c568168db561a16c",
+        "type": "ui_template",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "name": "",
+        "order": 1,
+        "width": "13",
+        "height": "7",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 1060,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dacaa6dc6cd9b8f3",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "debug 8",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "1c9124e9.e36edb",
+        "type": "inject",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1889,
+        "y": 1074,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "48a892ea.b7576c",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 2285,
+        "y": 1171,
+        "wires": []
+    },
+    {
+        "id": "3e290b9c4040e460",
+        "type": "function",
+        "z": "6b0c0aada256f58a",
+        "name": "function 1",
+        "func": "var newMsg = msg.payload.result.labels;\n\nvar head = 0;\nvar helmet = 0;\nvar people = 0;\n\nfor (var i = 0; i < newMsg.length; ++i) {\n    if (newMsg[i] == \"head\"){\n        head++; \n    }\n    if (newMsg[i] == \"helmet\"){\n        helmet++;\n    }\n}\nvar people = head + helmet;\n\nvar msg1 = { head: head };\nvar msg2 = { helmet: helmet };\nvar msg3 = { people: people };\n\nreturn [msg1, msg2, msg3];\n\n",
+        "outputs": 3,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 820,
+        "y": 340,
+        "wires": [
+            [
+                "c80dd1f2efe53590"
+            ],
+            [
+                "6cfdc3020c48133a"
+            ],
+            [
+                "5b55417ebc5b77b6"
+            ]
+        ]
+    },
+    {
+        "id": "6cfdc3020c48133a",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "People With Helmet",
+        "format": "{{msg.helmet}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1080,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c80dd1f2efe53590",
+        "type": "ui_text",
+        "z": "6b0c0aada256f58a",
+        "group": "c7a43587.2944e8",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "People Without Helmet",
+        "format": "{{msg.head}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1080,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "6129eac0.5bdec4",
