@@ -1158,11 +1158,49 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "none",
-        "x": 690,
-        "y": 680,
+        "x": 790,
+        "y": 760,
         "wires": [
-            []
+            [
+                "aa31d36ac611d693"
+            ]
         ]
+    },
+    {
+        "id": "aa31d36ac611d693",
+        "type": "file in",
+        "z": "6b0c0aada256f58a",
+        "name": "",
+        "filename": "test.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 950,
+        "y": 760,
+        "wires": [
+            [
+                "0e1b5ecedb4361f0"
+            ]
+        ]
+    },
+    {
+        "id": "0e1b5ecedb4361f0",
+        "type": "debug",
+        "z": "6b0c0aada256f58a",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 760,
+        "wires": []
     },
     {
         "id": "a9d5c908201f91f2",
